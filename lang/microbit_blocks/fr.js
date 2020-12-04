@@ -1,6 +1,6 @@
 'use strict';
 
-goog.provide('Blockly.Msg.en');
+goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 

@@ -8,13 +8,13 @@ function() {
 });
 
 head.load(
+"blocks/BlocklyArduino/variables.js",
 "blocks/BlocklyArduino/array.js",
 "blocks/BlocklyArduino/logic.js",
 "blocks/BlocklyArduino/loops.js",
 "blocks/BlocklyArduino/math.js",
 "blocks/BlocklyArduino/procedures.js",
 "blocks/BlocklyArduino/text.js",
-"blocks/BlocklyArduino/variables.js",
 function() {
     // Call a function when done
     console.log("Done loading Blockly@rduino Blocks");
@@ -74,36 +74,54 @@ head.load(
 "blocks/mbot/mbot_2.js",
 "blocks/mbot/mbot_3.js",
 "blocks/mbot/mbot_4.js",
+//20191010
+"blocks/meuse_robotics/micromachine/micromachine.js",
+"blocks/meuse_robotics/microsaurus/microsaurus.js",
+//20191010
 "blocks/MRduino/MRduino.js",
 "blocks/MRduino2/MRduino2.js",
 "blocks/multi-function/multi-function.js",
 "blocks/myhumankit/myhumankit.js",
 "blocks/nrf24l01/nrf24l01.js",
 "blocks/null/null.js",
+"blocks/otto/otto.js",
 "blocks/peguino/peguino_actuators.js",
 "blocks/peguino/peguino_sensors.js",
 "blocks/petitbot/petitbot.js",
 "blocks/QTR-1RC/QTR-1RC.js",
 "blocks/RF433/RF433.js",
 "blocks/RFID/RFID.js",
+"blocks/robobox/IRremote.js",
+"blocks/robobox/month4.js",
+"blocks/robobox/month5.js",
+"blocks/robobox/month6.js",
+"blocks/robobox/month8.js",
+"blocks/robobox/sensors.js",
+"blocks/robobox/servo.js",
 "blocks/robots/robot_motors.js",
 "blocks/robots/robot_misc.js",
 "blocks/robuno/robuno.js",
 "blocks/seeed/grove/grove.js",
+"blocks/seeed/grove_beginner_kit/grove_beginner_kit.js",
 "blocks/seeed/seeed_music_shield_2.2/seeed_music_shield_2.2.js",
 "blocks/sensor_actuator/sensor_actuator.js",
 "blocks/servo/servo.js",
 "blocks/Sharp_IR/Sharp_IR.js",
 "blocks/SPI/SPI.js",
+"blocks/stendhal/stendhal.js",
 "blocks/stepper_motor/stepper_motor.js",
 "blocks/storage/storage.js",
 "blocks/technozone51/technozone51.js",
 "blocks/tsl2561/tsl2561.js",
 "blocks/unipolar_stepper_motor/unipolar_stepper_motor.js",
+"blocks/virtuino/virtuino.js",
 "blocks/wii/wiichuck.js",
 "blocks/zumobot/zumo_auto.js",
 "blocks/zumobot/zumo_motors.js",
 "blocks/zumobot/zumo_sensors.js",
+"blocks/RTC_DS3231/RTC_DS3231.js",
+"blocks/Adafruit/Adafruit_SSD1306/Adafruit_SSD1306.js",
+"blocks/LoRa/LoRa.js",
 function() {
     // Call a function when done
     console.log("Done loading Various Blocks");
@@ -116,3 +134,4 @@ function() {
 	// Call a function when done
 	console.log("Done loading Blocks Configuration");
 });
+

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolbox>
-	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_VARIABLES,CAT_FUNCTIONS,CAT_MATH,CAT_ARDUINO,CAT_PEGUINO
-	</parametre>
+	<parametre id="defaultCategories">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_VARIABLES,CAT_FUNCTIONS,CAT_ARDUINO,CAT_PEGUINO</parametre>
 	<category name="CAT_LOGIC" colour="#FFAB19">
 		<block type="controls_if"></block>
 		<block type="controls_switch"></block>
@@ -338,25 +337,23 @@
 		<sep></sep>
 	</category>
 
-	<category name="CAT_PEGUINO" colour="#9CEEFF">
-		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
+	<category name="CAT_PEGUINO" colour="#32b2fc">
+		<category name="CAT_PEGUINO_IN" colour="#32b2fc">
 			<block type="peguino_sensors_pir_motion_sensor"></block>
-			<block type="peguino_sensors_button"></block>
 			<block type="peguino_sensors_dht_read_UnoNano"></block>
-			<block type="peguino_sensors_EMETTEUR_IR"></block>
-			<block type="peguino_sensors_RECEPTEUR_IR"></block>
+			<!-- <block type="peguino_sensors_EMETTEUR_IR"></block> -->
+			<!-- <block type="peguino_sensors_RECEPTEUR_IR"></block> -->
 			<block type="peguino_sensors_ldr"></block>
 			<block type="peguino_sensors_rotary_angle"></block>
+			<block type="peguino_sensors_microprox"></block>
 			<block type="peguino_sensors_ultrasonic_ranger"></block>
 			<block type="peguino_sensors_button"></block>
 		</category>
-		<category name="CAT_PEGUINO_OUT" colour="#9CEEFF">
+		<category name="CAT_PEGUINO_OUT" colour="#32b2fc">
 			<block type="peguino_actuators_buzzer"></block>
-			<block type="peguino_actuators_i2c_scan"></block>
-			<block type="peguino_actuators_i2c_lcdinit"></block>
-			<block type="peguino_actuators_i2c_lcdwrite"></block>
-			<block type="peguino_actuators_i2c_lcdclear"></block>
+			<block type="peguino_actuators_buzzer2"></block>
 			<block type="peguino_actuators_led"></block>
+			<block type="peguino_actuators_rgbled"></block>
 			<block type="peguino_actuators_servo_attach"></block>
 			<block type="peguino_actuators_servo_move"></block>
 			<block type="peguino_actuators_servo_read_degrees"></block>
@@ -364,10 +361,14 @@
 			<block type="peguino_actuators_servo_detach"></block>
 			<block type="peguino_actuators_servo_rot_continue"></block>
 			<block type="peguino_actuators_servo_rot_continue_param"></block>
+			<block type="peguino_actuators_i2c_scan"></block>
 			<block type="peguino_actuators_u8g_draw_string"></block>
 			<block type="peguino_actuators_u8g_draw_4strings"></block>
 			<block type="peguino_actuators_u8g_print"></block>
 			<block type="peguino_actuators_u8g_4draw_print"></block>
+			<block type="peguino_actuators_i2c_lcdinit"></block>
+			<block type="peguino_actuators_i2c_lcdwrite"></block>
+			<block type="peguino_actuators_i2c_lcdclear"></block>
 		</category>
 		<sep></sep>
 	</category>

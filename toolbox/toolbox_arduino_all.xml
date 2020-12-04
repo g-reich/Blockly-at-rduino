@@ -88,6 +88,9 @@
 		<block type="array_declare"></block>
 		<block type="array_modify"></block>
 		<block type="array_create_with"></block>
+		<block type="creer_tableau"></block>
+		<block type="fixer_tableau"></block>
+		<block type="tableau_getIndex"></block>
 		<block type="array_getIndex">
 			<value name="AT">
 				<block type="math_number">
@@ -107,36 +110,35 @@
 		</block>
 		<block type="text_length"></block>
 		<block type="text_isEmpty"></block>
-		<block type="text_compare_string"></block>
-		<!-- <block type="text_indexOf"> -->
-		<!-- <value name="VALUE"> -->
-		<!-- <block type="variables_get"> -->
-		<!-- <field name="VAR" class="textVar">...</field> -->
-		<!-- </block> -->
-		<!-- </value> -->
-		<!-- </block> -->
-		<!-- <block type="text_charAt"> -->
-		<!-- <value name="VALUE"> -->
-		<!-- <block type="variables_get"> -->
-		<!-- <field name="VAR" class="textVar">...</field> -->
-		<!-- </block> -->
-		<!-- </value> -->
-		<!-- </block> -->
-		<!-- <block type="text_getSubstring"> -->
-		<!-- <value name="STRING"> -->
-		<!-- <block type="variables_get"> -->
-		<!-- <field name="VAR" class="textVar">...</field> -->
-		<!-- </block> -->
-		<!-- </value> -->
-		<!-- </block> -->
-		<!-- <block type="text_changeCase"></block> -->
-		<!-- <block type="text_trim"></block> -->
-		<!-- <block type="text_print"></block> -->
-		<!-- <block type="text_prompt_ext"> -->
-		<!-- <value name="TEXT"> -->
-		<!-- <block type="text"></block> -->
-		<!-- </value> -->
-		<!-- </block> -->
+		<block type="text_indexOf">
+			<value name="VALUE">
+				<!-- <block type="variables_get"> -->
+					<!-- <field name="VAR" class="textVar">...</field> -->
+				<!-- </block> -->
+			</value>
+		</block>
+		<block type="text_charAt">
+			<value name="VALUE">
+<!-- 				<block type="variables_get"> -->
+<!-- 					<field name="VAR" class="textVar">...</field> -->
+<!-- 				</block> -->
+			</value>
+		</block>
+		<block type="text_getSubstring">
+			<value name="STRING">
+<!--				<block type="variables_get"> -->
+<!--					<field name="VAR" class="textVar">...</field> -->
+<!--				</block> -->
+			</value>
+		</block>
+		<block type="text_changeCase"></block>
+		<block type="text_trim"></block>
+		<block type="text_print"></block>
+		<block type="text_prompt_ext">
+			<value name="TEXT">
+				<block type="text"></block>
+			</value>
+		</block>
 	</category>
 	<!-- <category name="CAT_colour" colour="#c09e8c"> <block type="colour_picker"></block>
 		<block type="colour_random"></block> <block type="colour_rgb"> <value name="RED">
@@ -683,7 +685,6 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<category name="CAT_BT_TECHNOZONE_BT" colour="#646464">
 			<block type="technozone_bt_init"></block>
@@ -1007,7 +1008,7 @@
 			</value>
 		</block>
 	</category>
-	<category name="CAT_MATRIX_LED_RGB" colour="#8F8CB6">
+	<category name="CAT_MATRIX_LED_RGB" colour="#C9D7E2">
 		<block type="MatrixLED_WS2812B_init">
 			<value name="Pin_Matrix_init">
 				<shadow type="math_number">
@@ -1288,6 +1289,257 @@
 		</block>
 		<block type="ds18b20_search"></block>
 		<block type="ds18b20_temp"></block>
+	</category>
+    <category name="CAT_STENDHAL" colour="#9999CC">
+		<block type="base_setup"></block>
+		<block type="base_loop"></block>
+		<category name="CAT_STENDHAL_IN" colour="#9999CC">
+			<category name="CAT_STENDHAL_DIGITAL2" colour="#9999CC">
+				<block type="stendhal_button"></block>
+				<block type="stendhal_magnetsensor"></block>
+				<block type="stendhal_tactile"></block>
+				<block type="stendhal_tiltsensor"></block>
+				<block type="stendhal_pir_motion_sensor"></block>
+				<block type="stendhal_BARRIERE_IR"></block>
+				<block type="stendhal_OBSTACLE_IR"></block>
+				<block type="stendhal_logic_water_sensor"></block>
+			</category>
+			<category name="CAT_STENDHAL_ANALOG2" colour="#9999CC">
+				<block type="stendhal_rotary_angle"></block>
+				<block type="stendhal_temperature_sensor"></block>
+				<block type="stendhal_light_sensor"></block>
+				<block type="stendhal_sound_sensor"></block>
+				<block type="stendhal_ds18b20_search"></block>
+				<block type="stendhal_ds18b20_temp"></block>
+				<block type="tsl2561_init"></block>
+				<block type="tsl2561_read"></block>
+				<block type="stendhal_moisture_sensor"></block>
+				<block type="stendhal_dht_read"></block>
+				<block type="stendhal_ultrasonic_ranger"></block>
+			</category>
+		</category>
+		
+		<category name="CAT_STENDHAL_OUT" colour="#9999CC">
+			<category name="CAT_STENDHAL_OUT_LIGHT" colour="#9999CC">
+				<category name="CAT_STENDHAL_DIGITAL3" colour="#9999CC">
+					<block type="stendhal_led"></block>
+					<block type="stendhal_rgb_led"></block>
+				</category>	
+				<category name="CAT_STENDHAL_ANALOG3" colour="#9999CC">	
+					<block type="stendhal_LED_PWM_validator"></block>
+					<block type="stendhal_rgb_led_PWM"></block>
+					<block type="stendhal_EMETTEUR_IR"></block>
+				</category>	
+			</category>
+			<category name="CAT_STENDHAL_OUT_MOTOR" colour="#9999CC">	
+				<category name="CAT_STENDHAL_OUT_MOTOR_CLASSIC" colour="#9999CC">
+					<block type="stendhal_dcmotor_v1"></block>
+				</category>
+				<category name="CAT_STENDHAL_OUT_MOTOR_SERVO" colour="#9999CC">
+					<block type="servo_attach"></block>
+					<block type="servo_move">
+						<value name="DEGREE">
+							<shadow type="inout_angle"></shadow>
+						</value>
+					</block>
+					<block type="servo_read_degrees"></block>
+					<block type="servo_attached"></block>
+					<block type="servo_detach"></block>
+					<block type="servo_rot_continue"></block>
+					<block type="servo_rot_continue_param"></block>
+				</category>
+				<category name="CAT_STENDHAL_OUT_MOTOR_PAP" colour="#9999CC">	
+					<block type="stendhal_stepper_config"></block>
+					<block type="stendhal_stepper_step"></block>
+				</category>
+			</category>
+			<category name="CAT_STENDHAL_OUT_SOUND" colour="#9999CC">
+				<block type="stendhal_piezo_buzzer"></block>
+				<block type="tone">
+					<value name="NUM">
+						<shadow type="math_number">
+							<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="TPS">
+						<shadow type="math_number">
+							<field name="NUM">0</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="notone"></block>
+			</category>	
+			<category name="CAT_STENDHAL_DEAL" colour="#9999CC">
+				<category name="CAT_STENDHAL_DIGITAL3" colour="#9999CC">
+					<block type="stendhal_relay"></block>
+				</category>	
+				<category name="CAT_STENDHAL_ANALOG3" colour="#9999CC">
+					<block type="stendhal_mosfet"></block>
+				</category>	
+			</category>
+		</category>
+		<category name="CAT_STENDHAL_COMM" colour="#9999CC">
+			<category name="CAT_STENDHAL_COMM_LCD" colour="#9999CC">
+				<block type="lcd_i2c_lcdinit"></block>
+				<block type="lcd_i2c_lcdclear"></block>
+				<block type="lcd_i2c_lcdwrite">
+				<value name="COL">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="LIG">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="TEXT">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+			</block>
+				<block type="lcd_i2c_lcdscan"></block>
+			</category>
+			<category name="CAT_STENDHAL_COMM_USB" colour="#9999CC">	
+				<block type="serial_init"></block>
+				<block type="serial_print_var">
+					<value name="Text">
+						<shadow type="text">
+							<field name="TEXT"></field>
+						</shadow>
+					</value>
+					<value name="N">
+						<shadow type="math_number">
+							<field name="NUM">0</field>
+						</shadow>
+					</value>
+					<value name="NEW_LINE">
+						<shadow type="logic_boolean">
+							<field name="BOOL"></field>
+						</shadow>
+					</value>
+				</block>				
+			</category>
+			<category name="CAT_STENDHAL_COMM_LED" colour="#9999CC">
+				<block type="stendhal_rgb_led"></block>
+				<block type="stendhal_rgb_led_PWM"></block>
+			</category>
+			<category name="CAT_STENDHAL_COMM_BLUETOOTH" colour="#9999CC">
+				<block type="stendhal_bluetooth_slave"></block>
+				<block type="stendhal_bluetooth_slave_AT"></block>
+				<block type="Bluetooth_Shield_duinoFun">
+					<value name="BT_RX">
+						<shadow type="math_number">
+							<field name="NUM">7</field>
+						</shadow>
+					</value>
+					<value name="BT_TX">
+						<shadow type="math_number">
+							<field name="NUM">6</field>
+						</shadow>
+					</value>
+				</block>
+			</category>	
+		</category>
+		<category name="CAT_STENDHAL_BOARD" colour="#9999CC">
+			<category name="CAT_STENDHAL_TIME" colour="#9999CC">
+				<block type="base_delay">
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">1000</field>
+					</shadow>
+				</value>
+				<block type="base_delay_sec"></block>
+				<value name="DELAY_TIME">
+					<shadow type="math_number">
+						<field name="NUM">5</field>
+					</shadow>
+				</value>
+			</block>
+				<block type="millis"></block>
+				<block type="millis_sec"></block>
+			</category>
+			<category name="CAT_STENDHAL_MEMORY" colour="#9999CC">
+				<block type="storage_sd_write">
+				</block>
+			</category>
+		</category>
+		<sep></sep>
+	</category>
+	<category name="CAT_ROBOBOX" colour="#004281">
+	  <category name="CAT_ROBOBOX_SERVO" colour="#004281">
+	    <block type="robobox_servo_setAngle"></block>
+	    <block type="robobox_servo_getAngle"></block>
+	  </category>
+	  <category name="CAT_ROBOBOX_SENSORS" colour="#004281">
+	    <block type="robobox_sensors_ultrasound">
+	      <value name="TRIGER">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	      <value name="DIST">
+		<shadow type="math_number">
+		  <field name="NUM">1</field>
+		</shadow>
+	      </value>
+	    </block>
+	  </category>
+	  <category name="CAT_ROBOBOX_IRREMOTE" colour="#004281">
+	    <block type="robobox_IRremote_decode">
+	      <value name="PIN">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	    </block>
+	    <block type="robobox_IRremote_signalLen">
+	      <value name="PIN">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	    </block>
+	    <block type="robobox_IRremote_signalArray">
+	      <value name="PIN">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	    </block>
+	    <block type="robobox_IRremote_signalCode">
+	      <value name="PIN">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	    </block>
+	    <block type="robobox_IRremote_resume">
+	      <value name="PIN">
+		<shadow type="math_number">
+		  <field name="NUM">0</field>
+		</shadow>
+	      </value>
+	    </block>
+	    <block type="robobox_IRremote_send"></block>
+	    <block type="robobox_IRremote_sendArray"></block>
+	  </category>
+	  <category name="CAT_ROBOBOX_MONTH4" colour="#004281">
+	    <block type="robobox_month4_move"></block>
+	    <block type="robobox_month4_moveBackward"></block>
+	    <block type="robobox_month4_turn"></block>
+	    <block type="robobox_month4_turnLeft"></block>
+	  </category>
+	  <category name="CAT_ROBOBOX_MONTH6" colour="#004281">
+	    <block type="robobox_month6_lineC"></block>
+	    <block type="robobox_month6_lineD"></block>
+	    <block type="robobox_month6_lineG"></block>
+	    <block type="robobox_month6_calcAngle"></block>
+	  </category>
+	  <category name="CAT_ROBOBOX_MONTH8" colour="#004281">
+	    <block type="robobox_month8_analyze"></block>
+	  </category>
 	</category>
 	<category name="CAT_ROBUNO" colour="#1A1BFF">
 		<category name="CAT_ROBUNO_IN" colour="#1A1BFF">
@@ -1603,31 +1855,13 @@
 				</value>
 			</block>
 			<block type="bq_servo">
-				<value name="PIN">
-					<shadow type="math_number">
-						<field name="NUM">3</field>
-					</shadow>
-				</value>
-				<value name="DEGREE">
-					<shadow type="inout_angle">
-						<field name="NUM">90</field>
-					</shadow>
-				</value>
+				<value name="PIN"></value>
+				<value name="DEGREE"></value>
 			</block>
 			<block type="bq_servo_rotation_continue">
-				<value name="PIN">
-					<shadow type="math_number">
-						<field name="NUM">3</field>
-					</shadow>
-				</value>
-				<value name="SENS">
-					<shadow type="logic_boolean"></shadow>
-				</value>
-				<value name="VITESSE">
-					<shadow type="inout_angle">
-						<field name="NUM">127</field>
-					</shadow>
-				</value>
+				<value name="PIN"></value>
+				<value name="SENS"></value>
+				<value name="VITESSE"></value>
 			</block>
 		</category>
 		<category name="CAT_BQ_COMM" colour="#608621">
@@ -1846,11 +2080,45 @@
 					</shadow>
 				</value>
 			</block>
-			<block type="ArduiLed"></block>
 		</category>
 		<sep></sep>
 	</category>
-
+	<category name="CAT_GROVE_BEGINNER_KIT" colour="#8ec31f">
+		<category name="CAT_GROVE_BEGINNER_KIT_IN" colour="#8ec31f">
+			<block type="grove_gbk_button"></block>
+			<block type="grove_gbk_rotary_angle"></block>
+			<block type="grove_gbk_ldr"></block>	
+			<block type="grove_gbk_sound_sensor"></block>
+			<block type="grove_gbk_dht_read"></block>
+			<block type="grove_gbk_pressure_read"></block>
+			<block type="grove_gbk_gyro_read"></block>
+		</category>
+		<category name="CAT_GROVE_BEGINNER_KIT_OUT" colour="#8ec31f">
+			<block type="grove_gbk_led"></block>
+			<block type="grove_gbk_piezo_buzzer"></block>
+            <block type="grove_gbk_oled">
+            	<value name="input">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+                </value>
+                <value name="line">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="col">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<!-- <block type="grove_gbk_oled_draw_string"></block> -->
+			<!-- <block type="grove_gbk_oled_draw_4strings"></block> -->
+			<!-- <block type="grove_gbk_oled_print"></block> -->
+			<!-- <block type="grove_gbkoled_4draw_print"></block> -->
+		</category>
+	</category>
 	<category name="CAT_MULTIFUNCTION" colour="#0152AB">
 		<block type="multifunction_digital_read" colour="#0152AB"></block>
 		<block type="multifunction_pot_read" colour="#0152AB"></block>
@@ -1953,23 +2221,28 @@
 		</block>
 		<block type="RFID_code_acces" colour="#9BACB4">
 			<value name="VAL1">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL2">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL3">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 			<value name="VAL4">
-				<shadow type="text">
-					<field name="TEXT">1</field>
+				<shadow type="math_number">
+					<field name="NUM">1</field>
+				</shadow>
+			</value>
+			<value name="VAL5">
+				<shadow type="math_number">
+					<field name="NUM">1</field>
 				</shadow>
 			</value>
 		</block>
@@ -3163,7 +3436,34 @@
 			<block type="ethernet_wifi_localip"></block>				
 		</category>
 		<sep></sep>
-	</category>		
+	</category>			
+	<category name="CAT_VIRTUINO" colour="#DD3C23">
+		<block type="virtuino_init">
+			<value name="RX">
+				<block type="number">
+					<field name="RX"></field>
+				</block>
+			</value>
+			<value name="TX">
+				<block type="number">
+					<field name="TX"></field>
+				</block>
+			</value>
+			<value name="speed">
+				<block type="number">
+					<field name="speed"></field>
+				</block>
+			</value>
+		</block>		
+		<block type="virtuino_read_state_dv">
+			<value name="DV">
+				<block type="number">
+					<field name="DV"></field>
+				</block>
+			</value>
+		</block>
+		<sep></sep>
+	</category>
 	<category name="CAT_BLYNK_CC" colour="#23C890">
 		<category name="CAT_Blynk_Arduino_Connexion" colour="#23C890">
 			<block type="blynk_cc_uno_cnx_usb">
@@ -3269,15 +3569,33 @@
         </category>
 		<sep></sep>
     </category>
+	<category name="CAT_OTTO" colour="#32D900">
+		<block type="otto9_home"></block>
+		<block type="otto9_move"></block>
+		<block type="otto9_dance"></block>
+		<block type="otto9_do"></block>
+		<block type="otto9_gesture"></block>
+		<block type="otto9_sound"></block>
+		<block type="otto9_getdistance"></block>
+		<block type="otto9_getnoise"></block>
+		<block type="otto9_touchbutton"></block>
+		<category name="CAT_OTTOH" colour="#747F8A">
+			<block type="otto9_mouth"></block>
+			<block type="otto9_matrix"></block>
+			<block type="otto9_matrix_text"></block>
+			<block type="otto9_arms"></block>
+		</category>
+	</category>
+	<sep></sep>
 	<category name="CAT_PEGUINO" colour="#9CEEFF">
 		<category name="CAT_PEGUINO_IN" colour="#9CEEFF">
 			<block type="peguino_sensors_pir_motion_sensor"></block>
-			<block type="peguino_sensors_button"></block>
-			<block type="peguino_sensors_dht_read"></block>
-			<block type="peguino_sensors_EMETTEUR_IR"></block>
-			<block type="peguino_sensors_RECEPTEUR_IR"></block>
+			<block type="peguino_sensors_dht_read_UnoNano"></block>
+			<!-- <block type="peguino_sensors_EMETTEUR_IR"></block> -->
+			<!-- <block type="peguino_sensors_RECEPTEUR_IR"></block> -->
 			<block type="peguino_sensors_ldr"></block>
 			<block type="peguino_sensors_rotary_angle"></block>
+			<block type="peguino_sensors_microprox"></block>
 			<block type="peguino_sensors_ultrasonic_ranger"></block>
 			<block type="peguino_sensors_button"></block>
 		</category>
@@ -3288,6 +3606,7 @@
 			<block type="peguino_actuators_i2c_lcdwrite"></block>
 			<block type="peguino_actuators_i2c_lcdclear"></block>
 			<block type="peguino_actuators_led"></block>
+			<block type="peguino_actuators_rgbled"></block>
 			<block type="peguino_actuators_servo_attach"></block>
 			<block type="peguino_actuators_servo_move"></block>
 			<block type="peguino_actuators_servo_read_degrees"></block>
@@ -3295,11 +3614,425 @@
 			<block type="peguino_actuators_servo_detach"></block>
 			<block type="peguino_actuators_servo_rot_continue"></block>
 			<block type="peguino_actuators_servo_rot_continue_param"></block>
-			<block type="peguino_actuators_u8g_draw_string"></block>
-			<block type="peguino_actuators_u8g_draw_4strings"></block>
-			<block type="peguino_actuators_u8g_print"></block>
-			<block type="peguino_actuators_u8g_4draw_print"></block>
+			<block type="peguino_actuators_u8g_draw_string">
+				<value name="Text">
+					<shadow type="text">
+						<field name="TEXT">Exemple</field>
+					</shadow>
+				</value>
+				<value name="X">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Y">
+					<shadow type="math_number">
+						<field name="NUM">12</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="peguino_actuators_u8g_draw_4strings">
+				<value name="Text_line1">
+					<shadow type="text">
+						<field name="TEXT">Exemple ligne 1</field>
+					</shadow>
+				</value>
+				<value name="Text_line2">
+					<shadow type="text">
+						<field name="TEXT">Exemple ligne 2</field>
+					</shadow>
+				</value>
+				<value name="Text_line3">
+					<shadow type="text">
+						<field name="TEXT">Exemple ligne 3</field>
+					</shadow>
+				</value>
+				<value name="Text_line4">
+					<shadow type="text">
+						<field name="TEXT">Exemple ligne 4</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="peguino_actuators_u8g_print">
+				<value name="N">
+					<shadow type="math_number">
+						<field name="Num">0</field>
+					</shadow>
+				</value>
+				<value name="X">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="Y">
+					<shadow type="math_number">
+						<field name="NUM">12</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="peguino_actuators_u8g_4draw_print">
+				<value name="Text_line1">
+					<shadow type="text">
+						<field name="TEXT">Exemple ligne 1</field>
+					</shadow>
+				</value>
+				<value name="N1">
+					<shadow type="math_number">
+						<field name="Num">0</field>
+					</shadow>
+				</value>
+				<value name="Text_line2">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N2">
+					<shadow type="math_number">
+						<field name="Num"></field>
+					</shadow>
+				</value>
+				<value name="Text_line3">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N3">
+					<shadow type="math_number">
+						<field name="Num"></field>
+					</shadow>
+				</value>
+				<value name="Text_line4">
+					<shadow type="text">
+						<field name="TEXT"></field>
+					</shadow>
+				</value>
+				<value name="N4">
+					<shadow type="math_number">
+						<field name="Num"></field>
+					</shadow>
+				</value>
+			</block>
 		</category>
 		<sep></sep>
     </category>
+	<!--20191010-->
+	<category name="CAT_COG" colour="#0084ad">
+		<category name="CAT_MICROSAURUS" colour="#0084ad">
+			<block type="ms_init_wav"></block>
+			<block type="ms_play_wav"></block>
+			<block type="ms_IR_receiver"></block>
+			<block type="ms_IR_checker"></block>
+			<!--<block type="ms_IR_recv_flag"></block>-->
+			<block type="ms_IR_get_code"></block>
+			<!--<block type="ms_IR_reset_flag"></block>-->
+			<block type="ms_action_stop"></block>
+			<block type="ms_action_fwrd"></block>
+			<block type="ms_action_bwrd"></block>
+			<block type="ms_action_ltrn"></block>
+			<block type="ms_action_rtrn"></block>
+		</category>
+		<category name="CAT_MICROMACHINE" colour="#0084ad">
+			<block type="mm_init_wav"></block>
+			<block type="mm_play_wav"></block>
+			<block type="ms_IR_receiver"></block>
+			<block type="ms_IR_checker"></block>
+			<block type="ms_IR_get_code"></block>
+			<block type="mm_action_init"></block>
+			<block type="mm_servo_drive"></block>
+			<block type="mm_action_stop"></block>
+			<block type="mm_action_fwrd"></block>
+			<block type="mm_action_bwrd"></block>
+			<block type="mm_action_ltrn"></block>
+			<block type="mm_action_rtrn"></block>
+			<block type="mm_action_left"></block>
+			<block type="mm_action_rght"></block>
+			<block type="mm_action_free"></block>
+			<block type="mm_array_declare"></block>
+			<block type="mm_array_create_with"></block>
+		</category>
+	</category>
+	<!--20191010-->
+	<category name="CAT_RTC" colour="#0084ad">
+		<block type="Init_RTC_ds3231"></block>
+		<block type="DateTime_RTC_ds3231"></block>
+		<block type="order_read_rtc_ds3231"></block>
+		<block type="values_ds3231"></block>
+		<block type="values_text_ds3231"></block>
+	</category>
+	<category name="CAT_SSD1306" colour="160">
+		<category name="CAT_SSD1306_MAIN" colour="160">
+			<block type="SSD1306_init"></block>
+			<block type="SSD1306_display"></block>
+			<block type="SSD1306_clearDisplay"></block>
+			<block type="SSD1306_invertDisplay">
+				<value name="ENABLE">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_width"></block>
+                	<block type="SSD1306_height"></block>
+			<block type="SSD1306_startscroll">
+				<value name="START_ROW">
+					<block type="math_number">
+                                                <field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="END_ROW">
+                                        <block type="math_number">
+                                                <field name="NUM">7</field>
+                                        </block>
+				</value>
+			</block>
+                	<block type="SSD1306_stopscroll"></block>
+		</category>
+		<category name="CAT_SSD1306_DRAW" colour="160">
+			<block type="SSD1306_drawPixel">
+				<value name="XPOS">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawLine">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawRect">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="FILL">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_drawCircle">
+				<value name="XPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="RADIUS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawRoundRect">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="RADIUS">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_drawTriangle">
+				<value name="XPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_1">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="XPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_2">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+				</value>
+				<value name="XPOS_3">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS_3">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="FILL">
+                	                <block type="logic_boolean">
+                	                        <field name="BOOL">true</field>
+                	                </block>
+				</value>
+			</block>
+		</category>
+		<category name="CAT_SSD1306_TEXT" colour="160">>
+			<block type="SSD1306_setTextSize">
+				<value name="SIZE">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_setTextColour"></block>
+			<block type="SSD1306_setCursor">
+				<value name="XPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+                	        <value name="YPOS">
+                	                <block type="math_number">
+                	                        <field name="NUM">0</field>
+                	                </block>
+                	        </value>
+			</block>
+			<block type="SSD1306_cp437">
+				<value name="ENABLE">
+					<block type="logic_boolean">
+						<field name="BOOL">true</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_write">
+				<value name="CHAR">
+					<block type="text_char">
+						<field name="TEXT">x</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_println">
+				<value name="STRING">
+					<block type="text">
+						<field name="TEXT">example</field>
+					</block>
+				</value>
+			</block>
+			<block type="SSD1306_print">
+                	        <value name="STRING">
+                	                <block type="text">
+                	                        <field name="TEXT">example</field>
+                	                </block>
+                	        </value>
+			</block>
+		</category>
+	</category>
+	<category name="CAT_LORA" colour="160">
+		<block type="LoRa_init"></block>
+		<block type="LoRa_end"></block>
+		<block type="LoRa_onReceive"></block>
+		<block type="LoRa_onTxDone"></block>
+		<block type="LoRa_beginPacket">
+			<value name="IMPLICIT_HEADER">
+				<block type="math_number">
+                                                <field name="NUM">0</field>
+				</block>
+			</value>
+		</block>
+		<block type="LoRa_endPacket">
+			<value name="ASYNC">
+                       		<block type="logic_boolean">
+                                	<field name="BOOL">false</field>
+                                </block>
+                	</value>
+		</block>
+		<block type="LoRa_parsePacket"></block>
+		<block type="LoRa_parsePacket"></block>
+		<block type="LoRa_receive"></block>
+		<block type="LoRa_packetRssi"></block>
+		<block type="LoRa_packetSnr"></block>
+		<block type="LoRa_packetFrequencyError"></block>
+		<block type="LoRa_available"></block>
+		<block type="LoRa_peek"></block>
+		<block type="LoRa_read"></block>
+		<block type="LoRa_idle"></block>
+		<block type="LoRa_sleep"></block>
+		<block type="LoRa_setTxPower"></block>
+		<block type="LoRa_setSpreadingFactor"></block>
+		<block type="LoRa_setSignalBandwidth"></block>
+		<block type="LoRa_setCodingRate4"></block>
+		<block type="LoRa_setPreambleLength"></block>
+		<block type="LoRa_setSyncWord"></block>
+		<block type="LoRa_enableCrc"></block>
+		<block type="LoRa_disableCrc"></block>
+		<block type="LoRa_enableInvertIq"></block>
+		<block type="LoRa_disableInvertIq"></block>
+		<block type="LoRa_random"></block>
+	</category>
 </toolbox>
+

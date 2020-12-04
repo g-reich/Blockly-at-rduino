@@ -29,11 +29,50 @@ goog.require('Blockly.Arduino');
 
 
 Blockly.Arduino.peguino_actuators_buzzer = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_piezo_buzzer_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_UNIT);
+  var in_frequency = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT);
+  var in_playtime = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT);
+  var code = 'tone('+dropdown_pin+','+in_frequency+','+in_playtime+')';
   return code;
+};
+
+Blockly.Arduino.peguino_actuators_buzzer2 = function() {
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_UNIT);
+  var in_frequency = this.getFieldValue('Number'); //this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_VALUE);
+  var in_playtime = this.getFieldValue(Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT);
+  var code = 'tone('+dropdown_pin+','+in_frequency+','+in_playtime+')';
+  return code;
+};
+
+
+Blockly.Arduino.peguino_actuators_led = function() {
+  var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_LED_UNIT); 
+  var led_status = this.getFieldValue(Blockly.Msg.Peguino_LED_STATUS);
+  Blockly.Arduino.setups_['setup_button_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
+  var code = 'digitalWrite('+dropdown_pin+','+led_status+');\n';
+  return code;
+};
+
+// Peguino Nano RGB LED Red = Pin D12, Green = Pin D11, Blue = Pin D13 
+Blockly.Arduino.peguino_actuators_rgbled = function() {
+	var dropdown_pin = this.getFieldValue(Blockly.Msg.Peguino_RGBLED_STATUS);
+	var red_value = '255';	// The Peguino RGB LED Brick contains a common anode. To switch if off, all values have to be set to 255. 0 = maximum light
+	var green_value = '255';
+	var blue_value = '255';
+	var color_value = this.getFieldValue(Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE);
+    var hex = color_value.replace('#','');
+    var redinput = parseInt(hex.substring(0,2), 16);
+    var greeninput = parseInt(hex.substring(2,4), 16);
+    var blueinput = parseInt(hex.substring(4,6), 16);
+	var redvalue = redinput - 255; 
+	var red_value = Math.abs(redvalue);
+	var greenvalue = greeninput - 255; 
+	var green_value = Math.abs(greenvalue);
+	var bluevalue = blueinput - 255; 
+	var blue_value = Math.abs(bluevalue);
+	var returncode = ' analogWrite(12,'+red_value+');\n analogWrite(11,'+green_value+');\n analogWrite(13,'+blue_value+');\n ';
+	Blockly.Arduino.setups_['setup_RGBLED'] = "pinMode(12, OUTPUT);\n pinMode(11, OUTPUT);\n pinMode(13, OUTPUT);\n "
+	return returncode;
 };
 
 Blockly.Arduino.peguino_actuators_i2c_scan = function() {	
@@ -124,14 +163,6 @@ Blockly.Arduino.peguino_actuators_i2c_lcdclear = function() {
   return code;
 };
 
-Blockly.Arduino.peguino_actuators_led = function() {
-  var dropdown_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
-  var dropdown_stat = this.getFieldValue('STAT');
-  Blockly.Arduino.setups_['setup_grove_led_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
-  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
-  return code;
-};
-
 Blockly.Arduino.peguino_actuators_servo_attach = function() {
   var value_pin = Blockly.Arduino.valueToCode(this, 'PIN', Blockly.Arduino.ORDER_ATOMIC);
   var value_degree = Blockly.Arduino.valueToCode(this, 'DEGREE', Blockly.Arduino.ORDER_ATOMIC);
@@ -199,5 +230,105 @@ Blockly.Arduino.peguino_actuators_servo_rot_continue_param = function() {
   if (dropdown_etat == "BACKWARD") var value_degree = 90 - parseInt(degree);
 
   var code = dropdown_name + '.write(' + value_degree + ');\n';
+  return code;
+};
+
+Blockly.Arduino.peguino_actuators_u8g_draw_string = function() {
+  var value_text = Blockly.Arduino.valueToCode(this, 'Text', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var x = Blockly.Arduino.valueToCode(this, 'X', Blockly.Arduino.ORDER_ATOMIC);
+  var y = Blockly.Arduino.valueToCode(this, 'Y', Blockly.Arduino.ORDER_ATOMIC);    
+  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8glib.h>;\n U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);\n';
+  //dans le setup    
+  Blockly.Arduino.setups_["setup_u8g"] =
+	 'u8g.firstPage();\n'
+	+ 'do {'
+	+ 'u8g.setFont(u8g_font_unifont);\n'
+	+ 'u8g.drawStr( 0, 22, "Bonjour !");\n'
+	+ '} while( u8g.nextPage());\n'
+	+ 'delay(1000);\n';
+  var code = 'u8g.firstPage();\n'
+	code    += 'do {\n'
+	code    += 'u8g.drawStr('+x+', '+y+', '+value_text+');\n'	
+	code    += '}\n while( u8g.nextPage() );\n';
+  return code;
+};
+Blockly.Arduino.peguino_actuators_u8g_draw_4strings = function() {
+  var value_text_line1 = Blockly.Arduino.valueToCode(this, 'Text_line1', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line2 = Blockly.Arduino.valueToCode(this, 'Text_line2', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line3 = Blockly.Arduino.valueToCode(this, 'Text_line3', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line4 = Blockly.Arduino.valueToCode(this, 'Text_line4', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8glib.h>;\n U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);\n';
+  //dans le setup    
+  Blockly.Arduino.setups_["setup_u8g"] =
+	 'u8g.firstPage();\n'
+	+ 'do {'
+	+ 'u8g.setFont(u8g_font_unifont);\n'
+	+ 'u8g.drawStr( 0, 22, "Bonjour !");\n'
+	+ '} while( u8g.nextPage());\n'
+	+ 'delay(1000);\n';
+  var code = 'u8g.firstPage();\n'
+	code    += 'do {\n'
+	code    += 'u8g.drawStr(0, 12, '+value_text_line1+');\n'
+	code    += 'u8g.drawStr(0, 28, '+value_text_line2+');\n'
+	code    += 'u8g.drawStr(0, 44, '+value_text_line3+');\n'
+	code    += 'u8g.drawStr(0, 60, '+value_text_line4+');\n'	
+	code    += '}\n while( u8g.nextPage() );\n';
+  return code;
+};
+
+Blockly.Arduino.peguino_actuators_u8g_print = function() {
+  var value_n = Blockly.Arduino.valueToCode(this, 'N', Blockly.Arduino.ORDER_ATOMIC);
+  var x = Blockly.Arduino.valueToCode(this, 'X', Blockly.Arduino.ORDER_ATOMIC);
+  var y = Blockly.Arduino.valueToCode(this, 'Y', Blockly.Arduino.ORDER_ATOMIC);    
+  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8glib.h>;\n U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);\n';
+  //dans le setup    
+  Blockly.Arduino.setups_["setup_u8g"] =
+	'u8g.firstPage();\n'
+	+ 'do {'
+	+ 'u8g.setFont(u8g_font_unifont);\n'
+	+ 'u8g.drawStr( 0, 22, "Bonjour !");\n'
+	+ '} while( u8g.nextPage());\n'
+	+ 'delay(1000);\n';
+  var code =
+	'u8g.firstPage();\n'
+	code    += 'do {\n'
+	code    += 'u8g.setPrintPos('+x+', '+y+');\n'	
+	code    += 'u8g.print('+value_n+');\n'		
+	code    += '}\n while( u8g.nextPage() );\n';
+  return code;
+};
+Blockly.Arduino.peguino_actuators_u8g_4draw_print = function() {
+  var value_text_line1 = Blockly.Arduino.valueToCode(this, 'Text_line1', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line2 = Blockly.Arduino.valueToCode(this, 'Text_line2', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line3 = Blockly.Arduino.valueToCode(this, 'Text_line3', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_text_line4 = Blockly.Arduino.valueToCode(this, 'Text_line4', Blockly.Arduino.ORDER_ATOMIC) || '\'\'';
+  var value_n1 = Blockly.Arduino.valueToCode(this, 'N1', Blockly.Arduino.ORDER_ATOMIC);
+  var value_n2 = Blockly.Arduino.valueToCode(this, 'N2', Blockly.Arduino.ORDER_ATOMIC);
+  var value_n3 = Blockly.Arduino.valueToCode(this, 'N3', Blockly.Arduino.ORDER_ATOMIC);
+  var value_n4 = Blockly.Arduino.valueToCode(this, 'N4', Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_["define_u8g"] = '#include <U8glib.h>;\n U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_DEV_0|U8G_I2C_OPT_NO_ACK|U8G_I2C_OPT_FAST);\n';
+  //dans le setup    
+  Blockly.Arduino.setups_["setup_u8g"] =
+	 'u8g.firstPage();\n'
+	+ 'do {'
+	+ 'u8g.setFont(u8g_font_unifont);\n'
+	+ 'u8g.drawStr( 0, 22, "Bonjour !");\n'
+	+ '} while( u8g.nextPage());\n'
+	+ 'delay(1000);\n';
+  var code = 'u8g.firstPage();\n'
+	code    += 'do {\n'
+	code    += 'u8g.drawStr(0, 12, '+value_text_line1+');\n'
+	code    += 'u8g.setPrintPos(100, 12 );\n'	
+	code    += 'u8g.print('+value_n1+');\n'		
+	code    += 'u8g.drawStr(0, 28, '+value_text_line2+');\n'
+	code    += 'u8g.setPrintPos(100, 28 );\n'
+	code    += 'u8g.print('+value_n2+');\n'			
+	code    += 'u8g.drawStr(0, 44, '+value_text_line3+');\n'
+	code    += 'u8g.setPrintPos(100, 44 );\n'
+	code    += 'u8g.print('+value_n3+');\n'	
+	code    += 'u8g.drawStr(0, 60, '+value_text_line4+');\n'
+	code    += 'u8g.setPrintPos(100, 60 );\n'
+	code    += 'u8g.print('+value_n4+');\n'		
+	code    += '}\n while( u8g.nextPage() );\n';
   return code;
 };

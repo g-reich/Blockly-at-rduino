@@ -1,67 +1,67 @@
 'use strict';
 
-goog.provide('Blockly.Msg.en');
+goog.provide('Blockly.Msg.jp');
 
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ARRAY_CREATE_EMPTY_TITLE = 'empty!';
 Blockly.Msg.ARRAY_CREATE_WITH = "要素で作成";
-Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "array";
-Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "Add, remove, or reorder sections to reconfigure this array block.";
+Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TITLE_ADD = "配列";
+Blockly.Msg.ARRAY_CREATE_WITH_CONTAINER_TOOLTIP = "配列ブロック再定義のために追加、削除、並べ替え";
 Blockly.Msg.ARRAY_CREATE_WITH_HELPURL = "";
 Blockly.Msg.ARRAY_CREATE_WITH_INPUT_WITH = "配列";
-Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TITLE = "item";
-Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TOOLTIP = "Add an item to the array.";
-Blockly.Msg.ARRAY_CREATE_WITH_TOOLTIP = "Create a array with any number of items.";
+Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TITLE = "要素";
+Blockly.Msg.ARRAY_CREATE_WITH_ITEM_TOOLTIP = "配列に要素を追加";
+Blockly.Msg.ARRAY_CREATE_WITH_TOOLTIP = "要素で配列を作成";//"Create a array with any number of items."
 Blockly.Msg.ARRAY_GETINDEX_AT = "要素を取得";
 Blockly.Msg.ARRAY_GETINDEX_AT1 = "要素を取得";
 Blockly.Msg.ARRAY_GETINDEX_AT2 = "番地";
 Blockly.Msg.ARRAY_GETINDEX_HELPURL = "";
 Blockly.Msg.ARRAY_GETINDEX_ITEM = "配列";
 Blockly.Msg.ARRAY_GETINDEX_TOOLTIP = "";
-Blockly.Msg.ARRAY_GETINDEX_TOOLTIP1="retourne la valeur stockée dans la liste ou tableau";
-Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2="créé une liste ou tableau du type sélectionné";
-Blockly.Msg.ARRAY_GETINDEX_TOOLTIP3="fixe un (ou plusieurs) élément(s) de la liste ou tableau à la (aux) valeur(s) indiquée(s)";
+Blockly.Msg.ARRAY_GETINDEX_TOOLTIP1="リストまたは配列に保存されている値を返します";
+Blockly.Msg.ARRAY_GETINDEX_TOOLTIP2="選択したタイプのリストまたは配列を作成しました";
+Blockly.Msg.ARRAY_GETINDEX_TOOLTIP3="指定された値でリストまたは配列の要素を修正します";
 Blockly.Msg.ARRAY_CREATE = "宣言 ";
 Blockly.Msg.ARRAY_TAILLE = "要素数";
 Blockly.Msg.ARRAY_CONTIENT = "要素";
-Blockly.Msg.ARRAY_LIST = "list";
-Blockly.Msg.ARRAY_ARRAY = "array";
-Blockly.Msg.ARRAY_fixe = "change element at position";
-Blockly.Msg.ARRAY_DECLARE_NAME = "create array";
-Blockly.Msg.ARRAY_DECLARE_TYPE = "type";
-Blockly.Msg.ARRAY_DECLARE_SIZE = "number of elements";
-Blockly.Msg.ARRAY_DECLARE_TOOLTIP = "create an array of specific type and number of elements";
+Blockly.Msg.ARRAY_LIST = "リスト";
+Blockly.Msg.ARRAY_ARRAY = "配列";
+Blockly.Msg.ARRAY_fixe = "指定した場所の要素を変更";
+Blockly.Msg.ARRAY_DECLARE_NAME = "配列を作成";
+Blockly.Msg.ARRAY_DECLARE_TYPE = "タイプ";
+Blockly.Msg.ARRAY_DECLARE_SIZE = "要素数";
+Blockly.Msg.ARRAY_DECLARE_TOOLTIP = "指定したタイプと要素数で配列を作成";
 Blockly.Msg.ARRAY_MODIFY_INDICE = "セット　要素番号";
 Blockly.Msg.ARRAY_MODIFY_NAME = "配列";
 Blockly.Msg.ARRAY_MODIFY_VALUE = "値";
-Blockly.Msg.ARRAY_MODIFY_TOOLTIP = "set a specific value to an elemnt of an array";
+Blockly.Msg.ARRAY_MODIFY_TOOLTIP = "配列の要素に値を設定";
 
 //ESK 6/13/2015 SWITCH CASE
-Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add a condition to the case block.";
-Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP = "Add a final, catch-all condition to the if block.";
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "ケースブロックに条件を追加";
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP = "「もし」ブロックに終端条件を追加";
 Blockly.Msg.CONTROLS_SWITCH_HELPURL = "https://en.wikipedia.org/wiki/Switch_statement";
-Blockly.Msg.CONTROLS_SWITCH_SWITCH_TOOLTIP = "Add, remove, or reorder sections to reconfigure this if block.";
+Blockly.Msg.CONTROLS_SWITCH_SWITCH_TOOLTIP = "「もし」ブロック再定義のために追加、削除、並べ替え";
 Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE = "分岐 (";
 Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL = ")";
 Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT = "デフォルト";
 Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK = "ケース";
-Blockly.Msg.CONTROLS_SWITCH_MSG_SWITCHVAR = "Switch (var)";
+Blockly.Msg.CONTROLS_SWITCH_MSG_SWITCHVAR = "分岐 (変数)";//"Switch (var)"
 Blockly.Msg.CONTROLS_SWITCH_MSG_DO = "実行";
-Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_1 = "If a value is true, then do some statements.";
-Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_2 = "If a value is true, then do the first block of statements. Otherwise, do the second block of statements.";
-Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_3 = "If the first value is true, then do the first block of statements. Otherwise, if the second value is true, do the second block of statements.";
-Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_4 = "If the first value is true, then do the first block of statements. Otherwise, if the second value is true, do the second block of statements. If none of the values are true, do the last block of statements.";
-Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "Drag from the left into here to add";
-Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add additional case break do";
-Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Add optional default action";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_1 = "もし値が真なら、構文を実行";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_2 = "もし値が真なら、最初のブロックを実行、そうでなければ2番目のブロックを実行";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_3 = "もし最初の値が真なら、最初のブロックを実行、そうでなければ、2番目の値が真なら、2番目のブロックを実行";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_4 = "もし最初の値が真なら、最初のブロックを実行、そうでなければ、2番目の値が真なら、2番目のブロックを実行 もし両方とも真でなければ、最後のブロックを実行";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "追加するために左からここにドラッグ";
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "ケース　ブレイク　実行を追加";//"Add additional case break do"
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="デフォルトのアクションを追加";//"Add optional default action"
 
-Blockly.Msg.TEXT_CHAR_TOOLTIP = "character value that takes up 1 byte of memory";
+Blockly.Msg.TEXT_CHAR_TOOLTIP = "１バイトの文字";//"character value that takes up 1 byte of memory"
 Blockly.Msg.TEXT_CHAR_HELPURL = "https://www.arduino.cc/reference/en/language/variables/data-types/string/";
 Blockly.Msg.TEXT_COMPARE_STRING_HELPURL = "";
-Blockly.Msg.TEXT_COMPARE_STRING_TEXT = "Comparison of the two chains: ";
+Blockly.Msg.TEXT_COMPARE_STRING_TEXT = "文字列の比較: ";//"Comparison of the two chains: "
 Blockly.Msg.TEXT_COMPARE_STRING_TEXT2 = " = ";
-Blockly.Msg.TEXT_COMPARE_STRING_TOOLTIP = "Lets you know if two strings are identical or not.";
+Blockly.Msg.TEXT_COMPARE_STRING_TOOLTIP = "２つの文字列が一致するかどうか";//"Lets you know if two strings are identical or not."
 
 
 //july 9th function from JP Fontaine workspace
@@ -69,21 +69,25 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "関数";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "型";
 
 Blockly.Msg.VARIABLES_AS = "型";
-Blockly.Msg.VARIABLES_SET_CONST = " %1 を定数に %2";
-Blockly.Msg.ARD_TYPE_ARRAY = "Array";
-Blockly.Msg.ARD_TYPE_BOOL = "Boolean";
-Blockly.Msg.ARD_TYPE_CHAR = "Character";
-Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "ChildBlockMissing";
-Blockly.Msg.ARD_TYPE_DECIMAL = "Decimal";
-Blockly.Msg.ARD_TYPE_LONG = "Large Number";
-Blockly.Msg.ARD_TYPE_NULL = "Null";
-Blockly.Msg.ARD_TYPE_NUMBER = "Number";
-Blockly.Msg.ARD_TYPE_SHORT = "Short Number (byte)";
-Blockly.Msg.ARD_TYPE_TEXT = "Text";
-Blockly.Msg.ARD_TYPE_UNDEF = "Undefined";
-Blockly.Msg.ARD_TYPE_UNS_NUMBER = "Unsigned number";
-Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number";
-Blockly.Msg.ARD_TYPE_VOLATILE = "Volatile integer";
+Blockly.Msg.VARIABLES_SET_CONST = " を定数に ";
+Blockly.Msg.VARIABLES_SET_CONST_AT = " ";
+Blockly.Msg.VARIABLES_SET_CONST_TOOLTIP = "set a variable to non modifiable value";
+Blockly.Msg.VARIABLES_SET_CONST_HELPURL = "https://www.arduino.cc/reference/en/language/variables/variable-scope-qualifiers/const/";
+Blockly.Msg.ARD_TYPE_ARRAY = "配列";
+Blockly.Msg.ARD_TYPE_BOOL = "Boolean(真偽値)";
+Blockly.Msg.ARD_TYPE_CHAR = "Char(文字)";
+Blockly.Msg.ARD_TYPE_ARRAY_CHAR = "Char array(配列 文字)";
+Blockly.Msg.ARD_TYPE_CHILDBLOCKMISSING = "子ブロックがありません";//"ChildBlockMissing"
+Blockly.Msg.ARD_TYPE_DECIMAL = "Decimal(小数)";//"Decimal"
+Blockly.Msg.ARD_TYPE_LONG = "Large Number(整数32bit長)";//"Large Number"
+Blockly.Msg.ARD_TYPE_NULL = "Null";//"Null"
+Blockly.Msg.ARD_TYPE_NUMBER = "Number(整数16bit長)";//"Number"
+Blockly.Msg.ARD_TYPE_SHORT = "Short Number(整数8bit長)";//"Short Number (byte)"
+Blockly.Msg.ARD_TYPE_TEXT = "Text(文字列)";//"Text"
+Blockly.Msg.ARD_TYPE_UNDEF = "未定義";//"Undefined"
+Blockly.Msg.ARD_TYPE_UNS_NUMBER = "Unsigned number(符号なし整数16bit長)";//"Unsigned number"
+Blockly.Msg.ARD_TYPE_UNS_LONG = "Unsigned Long Number(符号なし整数32bit長)";//"Unsigned Long Number"
+Blockly.Msg.ARD_TYPE_VOLATILE = "Volatile integer(volatile整数)";//"Volatile integer"
 
 //**********************************categories***********************************************
 //**********************************categories***********************************************
@@ -147,10 +151,13 @@ Blockly.Msg.CAT_FISCHERTECHNIK_MOTORS_CC = "moteurs CC";
 Blockly.Msg.CAT_FLYCAMONE = "FlyCamOne Eco v2"; //added august 20th 2016
 
 Blockly.Msg.CAT_GROVE = "Grove";  //added march 9th 2015
-Blockly.Msg.CAT_GROVE_IN = "In";
-Blockly.Msg.CAT_GROVE_OUT = "Out";
-Blockly.Msg.CAT_GROVE_LCD = "LCD screen";
-Blockly.Msg.CAT_GROVE_COMM = "Communication";
+Blockly.Msg.CAT_GROVE_IN = "入力";
+Blockly.Msg.CAT_GROVE_OUT = "出力";
+Blockly.Msg.CAT_GROVE_LCD = "液晶スクリーン";
+Blockly.Msg.CAT_GROVE_COMM = "通信";
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added september 10th 2020
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = "sensors";
@@ -373,6 +380,11 @@ Blockly.Msg.CAT_ESP8266="ESP8266 IOT";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
 Blockly.Msg.CAT_html=" - HTML";
 
+Blockly.Msg.CAT_OTTO = "Otto robot"; //added 06/09/2019
+Blockly.Msg.CAT_OTTOH = "humanoid"; //added 06/10/2019
+
+Blockly.Msg.CAT_VIRTUINO = "Virtuino"; //added 08/05/2020
+
 
 //**********************************Dropdown menus messages***********************************************
 
@@ -413,7 +425,7 @@ Blockly.Msg.RENAME_INSTANCE_TITLE = 'Rename all "%1" instances to:';
 Blockly.Msg.ARDUINO_BASE_DELAY_HELPURL = "http://arduino.cc/en/Reference/delay";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME = "待つ (ミリ秒)";
 Blockly.Msg.ARDUINO_BASE_DELAY_DELAY_TIME_SEC = "待つ (秒)";
-Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "specify the pause time in milliseconds";
+Blockly.Msg.ARDUINO_BASE_DELAY_TOOLTIP = "ポーズ時間をミリ秒で指定";//"specify the pause time in milliseconds"
 Blockly.Msg.ARDUINO_BASE_SETUP = "初期設定";
 Blockly.Msg.ARDUINO_BASE_SETUP_HELPURL = "https://www.arduino.cc/en/Reference/Setup";
 Blockly.Msg.ARDUINO_BASE_LOOP = "永久ループ:";
@@ -421,65 +433,71 @@ Blockly.Msg.ARDUINO_BASE_SETUP_LOOP_HELPURL = "https://www.arduino.cc/en/Referen
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_HELPURL = "https://www.arduino.cc/en/Reference/Millis";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED = "時間計測（ミリ秒）";
 Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_SEC = "時間計測（秒）";
-Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "Number of milliseconds since the program started (unsigned long)";
-Blockly.Msg.ARDUINO_BETWEEN = "random number between";
-Blockly.Msg.ARDUINO_BETWEEN_AND = "and";
+Blockly.Msg.ARDUINO_SINCE_PROGRAM_STARTED_TOOLTIP = "プログラム開始からの経過ミリ秒(unsigned long)";//"Number of milliseconds since the program started (unsigned long)"
+Blockly.Msg.ARDUINO_BETWEEN = "乱数　範囲：";//"random number between"
+Blockly.Msg.ARDUINO_BETWEEN_AND = "から";//"and"
 Blockly.Msg.ARDUINO_BASE_MAP_HELPURL ="http://arduino.cc/en/Reference/map";
-Blockly.Msg.ARDUINO_BASE_MAP_NUM ="to the transposed ";
-Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "over a range of [0-";
-Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "transfer a value on a scale from 0 to 1023 to another scale";
+Blockly.Msg.ARDUINO_BASE_MAP_NUM ="スケール変更";//"to the transposed "
+Blockly.Msg.ARDUINO_BASE_MAP_DMAX = "範囲";//"over a range of [0-"
+Blockly.Msg.ARDUINO_BASE_MAP_TOOLTIP = "0から1023の数値を所定の範囲に変換";//"transfer a value on a scale from 0 to 1023 to another scale"
 Blockly.Msg.ARDUINO_BASE_CODE = "コード";
 Blockly.Msg.ARDUINO_BASE_COMMENT_HELPURL = "https://www.arduino.cc/reference/en/language/structure/further-syntax/blockcomment/";
 Blockly.Msg.ARDUINO_BASE_COMMENT_TEXT = "コメント";
-Blockly.Msg.ARDUINO_BASE_CONST = "定義";
+Blockly.Msg.ARDUINO_BASE_CONST = "定数";
 Blockly.Msg.ARDUINO_BASE_DEFINE_HELPURL = "https://www.arduino.cc/en/Reference/Define";
 Blockly.Msg.ARDUINO_BASE_DEFINE = "定義";
-Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "Define constants & librairies";
+Blockly.Msg.ARDUINO_BASE_DEFINE_TOOLTIP = "定数とライブラリを定義";//"Define constants & librairies"
+Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_HELPURL = "https://www.arduino.cc/en/Reference/Define";
+Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT1 = "変数を定義";//"define variable"
+Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_INPUT2 = "値";//"as"
+Blockly.Msg.ARDUINO_BASE_DEFINE_CONST_TOOLTIP = "allows the programmer to give a name to a constant value before the program is compiled";
 Blockly.Msg.ARDUINO_BASE_END = 'ずっと待つ (プログラム終了)';
-Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "help to show start and end of a program";
+Blockly.Msg.ARDUINO_BASE_BEGIN_TOOLTIP = "プログラムの開始と終了の目印";//"help to show start and end of a program"
 Blockly.Msg.ARDUINO_BASE_BEGIN = "スタート";
-Blockly.Msg.ARDUINO_BASE_TEMPO1 = "when";
-Blockly.Msg.ARDUINO_BASE_TEMPO2 = "elapsed";
-Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microsecondes", "us"],["millisecondes", "ms"],["secondes", "s"]];
+Blockly.Msg.ARDUINO_BASE_TEMPO1 = "";//"when"
+Blockly.Msg.ARDUINO_BASE_TEMPO2 = "経過後";//"elapsed"
+Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["マイクロ秒", "us"],["ミリ秒", "ms"],["秒", "s"]];
 Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Verify if interval of time is elapsed, if so do instructions.";
 Blockly.Msg.ARDUINO_BASE_TEMPO_HELPURL = "http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.ExempleBlinkWithoutDelay";
 Blockly.Msg.ARDUINO_BASE_TOGGLE = "ピン状態を反転";
-Blockly.Msg.ARDUINO_BASE_TOGGLE_TOOLTIP = "Toggle :\nwrite logic state 0 if was 1, or 1 if was 1, on PIN#";
+Blockly.Msg.ARDUINO_BASE_TOGGLE_TOOLTIP = "反転：特定のピンのロジック状態を0から1、1から0に反転する";//"Toggle :\nwrite logic state 0 if was 1, or 1 if was 1, on PIN#"
 Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TEXT = "ファイルを読み込む";
 Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_NAME = "ファイル名";
-Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TOOLTIP = "Permet d'inclure un fichier contenu dans le repertoire de travail";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_TOOLTIP = "作業ディレクトリにあるファイルをインクルード";//"Permet d'inclure un fichier contenu dans le repertoire de travail"
 Blockly.Msg.ARDUINO_BASE_INCLUDE_FILE_HELPURL = "https://www.arduino.cc/reference/en/language/structure/further-syntax/include/";
+Blockly.Msg.ARDUINO_BASE_INCLUDE_LIB_TEXT = "ライブラリをインクルード";//"include librarie"
+Blockly.Msg.ARDUINO_BASE_INCLUDE_LIB_TOOLTIP = " include outside libraries in your sketch";
 Blockly.Msg.ARDUINO_CONSTRAIN = "範囲に収める";
 Blockly.Msg.ARDUINO_CONSTRAIN_X = " 数値";
 Blockly.Msg.ARDUINO_CONSTRAIN_A = "をAから ";
 Blockly.Msg.ARDUINO_CONSTRAIN_B = "Bまでに ";
 Blockly.Msg.ARDUINO_CONSTRAIN_HELPURL = 'http://arduino.cc/en/Reference/Constrain';
-Blockly.Msg.ARDUINO_CONSTRAIN_TOOLTIP = 'Constrains a number to be within a range.';
+Blockly.Msg.ARDUINO_CONSTRAIN_TOOLTIP = '数値を所定の範囲に制限する';//'Constrains a number to be within a range.'
 Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_HELPURL = "http://arduino.cc/en/Reference/DigitalWrite";
 Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_INPUT = "LEDを設定";
-Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_TOOLTIP = "off or turn on the LED on the Arduino board";
+Blockly.Msg.ARDUINO_INOUT_BUILDIN_LED_TOOLTIP = "ArduinoボードのLEDをオンオフ";//"off or turn on the LED on the Arduino board"
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_HELPURL = "http://arduino.cc/en/Reference/DigitalWrite";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT1 = "デジタルピン";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_INPUT2 = "を設定";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_TOOLTIP = "write a 0 or 1 state numeric on a specific output";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_WRITE_TOOLTIP = "出力ピンに0か1の状態を書き込む";//"write a 0 or 1 state numeric on a specific output"
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_HELPURL = "http://arduino.cc/en/Reference/DigitalRead";
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_INPUT = "デジタルピンの値を読む";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP = "reading the digital state 0 or 1 of the digital pin";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_TOOLTIP = "デジタルピンの状態を０と１で読む";//"reading the digital state 0 or 1 of the digital pin"
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP = "プルアップ";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP_TOOLTIP = "reading the digital state 0 or 1 of the digital pin\npull-up option to check";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_READ_PULL_UP_TOOLTIP = "デジタルピンの状態を０と１で読む　プルアップオプションあり";
 Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
 Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT1 = "PWMピンに書き込む";
 Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_INPUT2 = "値";
-Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_TOOLTIP = "send a value between 0 and 255 on a specific output \nWARNING verify the No. on the board !";
+Blockly.Msg.ARDUINO_INOUT_PWM_WRITE_TOOLTIP = "0から255のPWM値をピンに送る \n使用できるピンを確認 !";//"send a value between 0 and 255 on a specific output \nWARNING verify the No. on the board !"
 Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT1 = "アナログピンに書き込む";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_INPUT2 = "値";
-Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_TOOLTIP = "send a value between 0 and 255 on a specific output";
+Blockly.Msg.ARDUINO_INOUT_ANALOG_WRITE_TOOLTIP = "出力ピンに0から255のアナログ値を書き込み";//"send a value between 0 and 255 on a specific output"
 Blockly.Msg.ARDUINO_TONE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
 Blockly.Msg.ARDUINO_TONE_INPUT1 = "サウンド出力　ピン：";
 Blockly.Msg.ARDUINO_TONE_INPUT2 = "周波数 (Hz)";
 Blockly.Msg.ARDUINO_TONE_INPUT3 = "～秒間 (ms)";
-Blockly.Msg.ARDUINO_TONE_TOOLTIP = "emits sound on the selected pin";
+Blockly.Msg.ARDUINO_TONE_TOOLTIP = "出力ピンにサウンドを出力";//"emits sound on the selected pin"
 Blockly.Msg.ARDUINO_INIT_WAV = "WAV再生初期化 サウンド1";
 Blockly.Msg.ARDUINO_INIT_WAV_SOUND2 = "サウンド2";
 Blockly.Msg.ARDUINO_INIT_WAV_SOUND3 = "サウンド3";
@@ -488,33 +506,36 @@ Blockly.Msg.ARDUINO_INIT_WAV_ENBLPIN = "ENピン";
 Blockly.Msg.ARDUINO_PLAY_WAV = "WAV再生 サウンド：";
 Blockly.Msg.ARDUINO_NOTONE_HELPURL = "http://arduino.cc/en/Reference/AnalogWrite";
 Blockly.Msg.ARDUINO_NOTONE_INPUT = "サウンド出力終了　ピン：";
-Blockly.Msg.ARDUINO_NOTONE_TOOLTIP = "mutes the sound on the selected pin";
+Blockly.Msg.ARDUINO_NOTONE_TOOLTIP = "サウンド出力をミュート";//"mutes the sound on the selected pin"
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_HELPURL = "http://arduino.cc/en/Reference/AnalogRead";
 Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_INPUT = "アナログ入力読み込み";
-Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP = "returns a value between 0 and 1023";
+Blockly.Msg.ARDUINO_INOUT_ANALOG_READ_TOOLTIP = "0 から 1023 の値を返す";//"returns a value between 0 and 1023"
 Blockly.Msg.ARDUINO_INOUT_ONOFF_HELPURL = "http://arduino.cc/en/Reference/Constants";
 Blockly.Msg.ARDUINO_INOUT_STATE = "state";
-Blockly.Msg.ARDUINO_PULSEIN="PulseIn (µs) pin#";
-Blockly.Msg.ARDUINO_PULSEIN_TIMEOUT="timeout (µs) ";
+Blockly.Msg.ARDUINO_INOUT_ANGLE = "角度";
+Blockly.Msg.ARDUINO_INOUT_ANGLE_TOOLTIP = "0 から 360°で角度を入力";//"angle entre 0 et 360°"
+Blockly.Msg.ARDUINO_INOUT_ANGLE_HELPURL = "https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/angle";
+Blockly.Msg.ARDUINO_PULSEIN="パルス検出 (µs) ピン#";//"PulseIn (µs) pin#"
+Blockly.Msg.ARDUINO_PULSEIN_TIMEOUT="タイムアウト (µs) ";//"timeout (µs) "
 Blockly.Msg.ARDUINO_SERVO_MOVE_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
 Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT1 = "サーボ駆動";
 Blockly.Msg.ARDUINO_SERVO_MOVE_IMAGE = "images/a991.jpg";
 Blockly.Msg.ARDUINO_SERVO_MOVE_INPUT2 = "ピン";
 Blockly.Msg.ARDUINO_SERVO_MOVE_DEGREE = "設定角度 (0~180°)";
-Blockly.Msg.ARDUINO_SERVO_MOVE_DELAY_TIME = "during a period (ms)";
-Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP = "rotation possible between 0 ~ 180 degrees";
+Blockly.Msg.ARDUINO_SERVO_MOVE_DELAY_TIME = "～の期間 (ms)";//"during a period (ms)"
+Blockly.Msg.ARDUINO_SERVO_MOVE_TOOLTIP = "0 ~ 180°　回転可能";//"rotation possible between 0 ~ 180 degrees"
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_HELPURL = "http://www.arduino.cc/playground/ComponentLib/servo";
-Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1 = "the angle of the servo motor";
+Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT1 = "サーボモータの角度";//"the angle of the servo motor"
 Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_IMAGE = "images/a991.jpg";
-Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "connected on the pin";
-Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "returns the number of degrees the last rotation";
+Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_INPUT2 = "接続ピン";//"connected on the pin"
+Blockly.Msg.ARDUINO_SERVO_READ_DEGREES_TOOLTIP = "前回の回転角度を返す";//"returns the number of degrees the last rotation"
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_HELPURL = "https://www.arduino.cc/en/Reference/ServoWrite";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TEXT = "永続回転サーボ";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT1 = "PIN#";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT2 = "スピード [0~180]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT3 = "スピード [0~90]";
 Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_INPUT4 = "回転方向";
-Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "degrees for power : 0° -> max on left | 90° -> stop | 180° -> max on right";
+Blockly.Msg.ARDUINO_SERVO_ROT_CONTINUE_TOOLTIP = "設定角度 : 0° -> 左回転max | 90° -> 停止 | 180° -> 右回転max";//"degrees for power : 0° -> max on left | 90° -> stop | 180° -> max on right"
 Blockly.Msg.ARDUINO_SERVO_PIN = "PIN#";
 Blockly.Msg.ARDUINO_SERVO_ATTACH1 = "サーボセット";
 Blockly.Msg.ARDUINO_SERVO_ATTACH2 = "id#";
@@ -524,18 +545,18 @@ Blockly.Msg.ARDUINO_SERIAL_PRINT_HELPURL = "http://www.arduino.cc/en/Serial/Prin
 Blockly.Msg.ARDUINO_SERIAL_PRINT_CONTENT = "シリアルでデータを送る　ポート:";
 Blockly.Msg.ARDUINO_SERIAL_PRINTLN_CONTENT = "シリアルで１行送る ポート:";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_TAB_CONTENT = "シリアルでタブを送る ポート:";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "sends data over the serial port for sruvaillance by the monitor in ASCII";
+Blockly.Msg.ARDUINO_SERIAL_PRINT_TOOLTIP = "シリアルモニタにASCII形式で送信";//"sends data over the serial port for sruvaillance by the monitor in ASCII"
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_TEXT = "シリアルで文字を送る ポート:";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NUMBER = "数値を追加 :";
 Blockly.Msg.ARDUINO_SERIAL_PRINT_VAR_NEW_LINE = "改行する ?";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NUMBER = "Afficher sur le port Série :";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NEWLINE = "Nouvelle ligne?";
-Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_FIELDDROPDOWN = [["oui", "true"], ["non", "false"]];
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NUMBER = "プリント:";//"Afficher sur le port Série :"
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_NEWLINE = "改行?";//"Nouvelle ligne?"
+Blockly.Msg.ARDUINO_SERIAL_PRINT_MULTI_FIELDDROPDOWN = [["はい", "true"], ["いいえ", "false"]];
 
 Blockly.Msg.LKL_ATTACHINTERRUPT_PIN = "割り込み ピン#";
 Blockly.Msg.LKL_DETACHINTERRUPT_PIN = "割り込み中止 ピン#";
-Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT = 'Attachs interrupt to a specific Port';
-Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT = 'Detachs interrupt to a specific Port';
+Blockly.Msg.LKL_TOOLTIP_INOUT_ATTACHINTERRUPT = 'ピンに割り込みを設定';//'Attachs interrupt to a specific Port'
+Blockly.Msg.LKL_TOOLTIP_INOUT_DETACHINTERRUPT = 'ピンへの割り込みを解除';//'Detachs interrupt to a specific Port'
 Blockly.Msg.LKL_MODE = 'モード';
 Blockly.Msg.LKL_DROPDOWN = [['RISING', "RISING"], ['FALLING', "FALLING"], ['CHANGE', "CHANGE"], ['LOW', "LOW"]];
 
@@ -543,7 +564,7 @@ Blockly.Msg.LKL_DROPDOWN = [['RISING', "RISING"], ['FALLING', "FALLING"], ['CHAN
 Blockly.Msg.Serial_Init="シリアル通信　速度設定";
 Blockly.Msg.Serial_Print="シリアル　コンソールに出力";
 Blockly.Msg.Serial_Write="シリアル　バイナリ送信";
-Blockly.Msg.Serial_write_out="Write";
+Blockly.Msg.Serial_write_out="データ送信";//"Write"
 Blockly.Msg.Serial_Print_Format="形式を決めて送信";
 Blockly.Msg.Serial_Print_ForDecimal="10進数";
 Blockly.Msg.Serial_Print_ForHexa="16進数";
@@ -552,20 +573,22 @@ Blockly.Msg.Serial_Print_ForOct="8進数";
 Blockly.Msg.Serial_read="シリアル読み込み";
 Blockly.Msg.Serial_avai="シリアル有効　?";
 Blockly.Msg.Serial_flush="送信終了を待つ";
+Blockly.Msg.Serial_line="line break";
+Blockly.Msg.Serial_line_tooltip="insert a line break in serial monitor";
 Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_HELPURL = "https://www.arduino.cc/en/Serial/ReadStringUntil";
-Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "String read until";
-Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "reads characters from the serial buffer into a string";
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_CONTENT = "文字列受信　終端：";//"String read until"
+Blockly.Msg.ARDUINO_SERIAL_READSTRINGUNTIL_TOOLTIP = "シリアルバッファから文字列読み込み";//"reads characters from the serial buffer into a string"
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_DEFAULT_NAME="SoftSerial";
-Blockly.Msg.SSERIAL_Init="INIT";
-Blockly.Msg.SSERIAL_SPEED="speed";
+Blockly.Msg.SSERIAL_Init="初期化";//"INIT"
+Blockly.Msg.SSERIAL_SPEED="速度";//"speed"
 Blockly.Msg.SSERIAL_TX="TX#";
 Blockly.Msg.SSERIAL_RX="RX#";
-Blockly.Msg.SSERIAL_Read="SoftwareSerial Read";
-Blockly.Msg.SSERIAL_Print="SoftwareSerial Print";
-Blockly.Msg.SSERIAL_Write="SoftwareSerial Write";
-Blockly.Msg.SSERIAL_Avai="SoftwareSerial Available?";
+Blockly.Msg.SSERIAL_Read="ソフトウェアシリアル　受信";//"SoftwareSerial Read"
+Blockly.Msg.SSERIAL_Print="ソフトウェアシリアル　プリント";//"SoftwareSerial Print"
+Blockly.Msg.SSERIAL_Write="ソフトウェアシリアル　送信";//"SoftwareSerial Write"
+Blockly.Msg.SSERIAL_Avai="ソフトウェアシリアル　到着?";//"SoftwareSerial Available?"
 
 //VARIABLES
 Blockly.Msg.ARDUINO_VAR_DECLARE="Declare";
@@ -584,7 +607,7 @@ Blockly.Msg.CONVERSION_MAP_IN_MIN = "前　下限";
 Blockly.Msg.CONVERSION_MAP_IN_MAX = "前　上限";
 Blockly.Msg.CONVERSION_MAP_OUT_MIN = "後　下限";
 Blockly.Msg.CONVERSION_MAP_OUT_MAX = "後　上限";
-Blockly.Msg.CONVERSION_MAP_TOOLTIP = "re-maps a number from one range to another";
+Blockly.Msg.CONVERSION_MAP_TOOLTIP = "数値の範囲を変換";//"re-maps a number from one range to another"
 
 //added april 6th 2015
 Blockly.Msg.GROVE_INOUT_DHT_HELPURL = "https://github.com/adafruit/DHT-sensor-library";
@@ -1612,10 +1635,10 @@ Blockly.Msg.ROBOTS_MOTORS_L298N_TOOLTIP = "L298N block, use the same id as in th
 
 //******** pbra 20160607 PinMode
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_HELPURL = "https://www.arduino.cc/en/Reference/PinMode";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "Set Pin Mode for pin";
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "to";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT1 = "ピンのモードを設定　ピン";//"Set Pin Mode for pin"
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_INPUT2 = "モード";//"to"
 Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_DROPDOWN = [["INPUT", "INPUT"], ["OUTPUT", "OUTPUT"], ["INPUT_PULLUP", "INPUT_PULLUP"]];
-Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "Configures the specified pin to behave either as an input or an output";
+Blockly.Msg.ARDUINO_INOUT_DIGITAL_MODE_TOOLTIP = "ピンの入出力モードを設定する";//"Configures the specified pin to behave either as an input or an output"
 
 //******** Bluetotth Electronics example http://www.keuwl.com/electronics.html
 Blockly.Msg.BT_ELEC_Init_HELPURL = "https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth&hl=fr";
@@ -1685,15 +1708,15 @@ Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Blue = "set blue (255 max) =";
 Blockly.Msg.MatrixLED_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
 
 //******** Storage : SD card + EEPROM https://www.arduino.cc/en/Reference/EEPROM
-Blockly.Msg.STORAGE_WRITE_SD_FILE = "SD Card, write file";
-Blockly.Msg.STORAGE_SD_DATA = "with data";
-Blockly.Msg.STORAGE_SD_NEWLINE = "newline?";
-Blockly.Msg.STORAGE_EEPROM_WRITE_LONG = "EEPROM write (long) adress";
-Blockly.Msg.STORAGE_DATA_LONG = "data";
-Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - read (long) adress";
-Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM - write (byte) adress";
-Blockly.Msg.STORAGE_DATA_BYTE = "data";
-Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - write (byte) adress";
+Blockly.Msg.STORAGE_WRITE_SD_FILE = "SDカード, 書き込みファイル";//"SD Card, write file"
+Blockly.Msg.STORAGE_SD_DATA = "データ";//"with data"
+Blockly.Msg.STORAGE_SD_NEWLINE = "改行?";//"newline?"
+Blockly.Msg.STORAGE_EEPROM_WRITE_LONG = "EEPROM 書き込み (long) アドレス";//"EEPROM write (long) adress"
+Blockly.Msg.STORAGE_DATA_LONG = "データ";//"data"
+Blockly.Msg.STORAGE_EEPROM_READ_LONG = "EEPROM - read (long) アドレス";//"EEPROM - read (long) adress"
+Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM - 書き込み (byte) アドレス";//"EEPROM - write (byte) adress"
+Blockly.Msg.STORAGE_DATA_BYTE = "データ";//"data"
+Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM - 書き込み (byte) アドレス";//"EEPROM - write (byte) adress"
 
 //******** ESC controller for brushless motor
 Blockly.Msg.DRONE_INTRO = "Motor control";
@@ -2360,3 +2383,349 @@ Blockly.Msg.dfrobot_ISD1820_TOOLTIP = "record for 10s max with button, play with
 Blockly.Msg.dfrobot_ISD1820_record = "push record button to record 10s max";
 Blockly.Msg.dfrobot_ISD1820_play = "play recorded sound";
 Blockly.Msg.dfrobot_ISD1820_play_Input = "PIN#";
+
+////////////////////////////Capacitive Sensor Librarie/////////////////////
+Blockly.Msg.CAPACITIV_HELPURL = "https://github.com/PaulStoffregen/CapacitiveSensor";
+Blockly.Msg.CAPACITIV_TEXT = "capacitive value";
+Blockly.Msg.CAPACITIV_INPUT1 = "send pinn";
+Blockly.Msg.CAPACITIV_INPUT2 = "sensor pin";
+Blockly.Msg.CAPACITIV_CALIBRATION = "automatic calibration";
+Blockly.Msg.CAPACITIV_TOOLTIP = "10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired";
+
+////////////////////////////ESP8266 WiFi/////////////////////
+Blockly.Msg.esp8266_init_tooltip="initialisation du module wifi et connection avec les paramètres indiqués";
+Blockly.Msg.esp8266_1="Esp 8266";
+Blockly.Msg.esp8266_2="ssid";
+Blockly.Msg.esp8266_3="clé";
+Blockly.Msg.esp8266_4="IP";
+Blockly.Msg.esp8266_5="passerelle";
+Blockly.Msg.esp8266_6="masque";
+Blockly.Msg.esp8266_7=[["client", "client"],["serveur", "serveur"]];
+Blockly.Msg.esp8266_8="port";
+Blockly.Msg.esp8266_9=[["dynamique", "dynamic"],["statique", "static"]];
+Blockly.Msg.esp8266_10="adressage";
+Blockly.Msg.esp8266_recept_tooltip="reception";
+Blockly.Msg.esp8266_url="http://julien.coron.free.fr/?p=928";
+Blockly.Msg.esp8266_send_html_tooltip="...";
+Blockly.Msg.esp8266_send_html="";
+Blockly.Msg.esp8266_send_tooltip="...";
+Blockly.Msg.esp8266_send="";
+Blockly.Msg.esp8266_wait_tooltip="...";
+
+////////////////////////////OTTO DIY Robot/////////////////////
+Blockly.Msg.OTTO9_HOME_TEXT = "home";
+Blockly.Msg.OTTO9_HOME_TOOLTIP = "";
+Blockly.Msg.OTTO9_HOME_URL = "https://www.ottodiy.com/";
+Blockly.Msg.OTTO9_MOVE_TEXT = "move";
+Blockly.Msg.OTTO9_MOVE_CHOICE = [["forward", "FORWARD"], ["backward", "BACKWARD"], ["turn left", "LEFT"], ["turn right", "RIGHT"], ["bend to the left", "BENDLEFT"], ["bend to the right", "BENDRIGHT"], ["shake left leg", "SHAKELEFT"], ["shake right leg", "SHAKERIGHT"], ["up", "jump"]];
+Blockly.Msg.OTTO9_MOVE_SPEED_TEXT = "speed";
+Blockly.Msg.OTTO9_MOVE_SPEED_CHOICE = [["normal", "1000"],["slow", "2000"],["very slow", "3000"] , ["fast", "750"], ["very fast", "500"], ["way to fast", "250"]];
+Blockly.Msg.OTTO9_DANCE_TEXT = "dance";
+Blockly.Msg.OTTO9_DANCE_CHOICE = [["moonwalker left", "moonwalkerLEFT"],  ["moonwalker right", "moonwalkerRIGHT"],["crusaito left", "crusaitoLEFT"],["crusaito right", "crusaitoRIGHT"], ["flapping front", "flappingFRONT"], ["flapping back", "flappingBACK"]];
+Blockly.Msg.OTTO9_DANCE_SPEED_TEXT = "speed";
+Blockly.Msg.OTTO9_DANCE_SPEED_CHOICE = [["normal", "1000"],["slow", "2000"],["very slow", "3000"] , ["fast", "750"], ["very fast", "500"], ["way to fast", "250"]];
+Blockly.Msg.OTTO9_DANCE_SIZE_TEXT = "size";
+Blockly.Msg.OTTO9_DANCE_SIZE_CHOICE = [["normal", "25"], ["little", "10"], ["big", "40"]];
+Blockly.Msg.OTTO9_DO_TEXT = "do";
+Blockly.Msg.OTTO9_DO_CHOICE = [ ["swing", "swing"], ["updown", "updown"], ["tiptoeSwing", "tiptoeSwing"], ["jitter", "jitter"], ["ascendingTurn", "ascendingTurn"]];
+Blockly.Msg.OTTO9_DO_SPEED_TEXT = "speed";
+Blockly.Msg.OTTO9_DO_SPEED_CHOICE = [["normal", "1000"],["slow", "2000"],["very slow", "3000"] , ["fast", "750"], ["very fast", "500"], ["way to fast", "250"]];
+Blockly.Msg.OTTO9_DO_SIZE_TEXT = "size";
+Blockly.Msg.OTTO9_DO_SIZE_CHOICE = [["normal", "20"], ["little", "5"], ["big", "45"]];
+Blockly.Msg.OTTO9_GESTURE_TEXT = "gesture";
+Blockly.Msg.OTTO9_GESTURE_CHOICE = [["happy", "OttoHappy"], ["super happy", "OttoSuperHappy"], ["sad", "OttoSad"], ["sleeping", "OttoSleeping"], ["fart", "OttoFart"], ["confused", "OttoConfused"], ["fretful", "OttoFretful"], ["love", "OttoLove"], ["angry", "OttoAngry"], ["magic", "OttoMagic"], ["wave", "OttoWave"], ["victory", "OttoVictory"], ["fail", "OttoFail"]];
+Blockly.Msg.OTTO9_SOUND_TEXT = "sound";
+Blockly.Msg.OTTO9_SOUND_CHOICE = [["cuddly", "S_cuddly"], ["OhOoh", "S_OhOoh"], ["OhOoh2", "S_OhOoh2"], ["surprise", "S_surprise"], ["button pushed", "S_buttonPushed"], ["mode1", "S_mode1"], ["mode2", "S_mode2"], ["mode3", "S_mode3"], ["sleeping", "S_sleeping"], ["fart1", "S_fart1"], ["fart2", "S_fart2"], ["fart3", "S_fart3"], ["happy", "S_happy"], ["happy short", "S_happy_short"], ["super happy", "S_superHappy"], ["sad", "S_sad"], ["confused", "S_confused"], ["connection", "S_connection"], ["disconnection", "S_disconnection"]];
+Blockly.Msg.OTTO9_GETDISTANCE_TEXT = "distance";
+Blockly.Msg.OTTO9_GETNOISE_TEXT = "noise";
+Blockly.Msg.OTTO9_GETTOUCH_TEXT = "touch";
+Blockly.Msg.OTTO9_MOUTH_TEXT = "mouth";
+Blockly.Msg.OTTO9_MOUTH_CHOICE = [["happyOpen", "happyOpen"],["happyClosed", "happyClosed"],["sadOpen", "23"], ["sadClosed", "24"],["vampire1", "vamp1"], ["vampire2", "vamp2"],   ["smile", "smile"], ["heart", "heart"], ["small surprise", "smallSurprise"], ["big surprise", "bigSurprise"], ["confused", "confused"], ["0", "zero"], ["1", "one"], ["2", "two"], ["3", "three"], ["4", "four"],["5", "five"],["6", "six"],["7", "seven"],["8", "eight"],["9", "nine"], ["x", "xMouth"], ["ok", "okMouth"],["interrogation", "27"],["tongue", "tongueOut"],["culito", "culito"],  ["thunder", "thunder"], ["line", "lineMouth"], ["diagonal", "21"], ["little Uuh", "littleUuh, i"], ["dreamMouth0", "dreamMouth, 0"], ["dreamMouth1", "dreamMouth, 1"], ["dreamMouth2", "dreamMouth, 2"]];
+Blockly.Msg.OTTO9_MATRIX_TEXT = "matrix";
+Blockly.Msg.OTTO9_MATRIXTEXT_TEXT = "matrix text";
+Blockly.Msg.OTTO9_ARMS_TEXT = "arms";
+Blockly.Msg.OTTO9_ARMS_CHOICE = [["hands up", "HANDSUP"], ["handwave left", "HANDWAVE1"], ["handwave right", "HANDWAVE2"]];
+
+
+//20191010
+Blockly.Msg.CAT_COG = "COG";
+Blockly.Msg.CAT_MICROSAURUS = "マイクロサウルス";
+Blockly.Msg.CAT_MICROMACHINE = "マイクロマシーン";
+//
+Blockly.Msg.ms_IR_init_TEXT = "赤外リモコン初期化";
+Blockly.Msg.ms_IR_check_TEXT = "赤外リモコン受信チェック";
+Blockly.Msg.ms_IR_flag_TEXT = "受信フラグ";
+Blockly.Msg.ms_IR_reset_TEXT = "フラグリセット";
+Blockly.Msg.ms_IR_reception_code_TEXT = "受信データ";
+Blockly.Msg.ms_INIT_WAV = "WAV再生初期化 サウンド1";
+Blockly.Msg.ms_INIT_WAV_SOUND2 = "サウンド2";
+Blockly.Msg.ms_INIT_WAV_SOUND3 = "サウンド3";
+Blockly.Msg.ms_INIT_WAV_AUDPIN = "出力ピン";
+Blockly.Msg.ms_INIT_WAV_ENBLPIN = "ENピン";
+Blockly.Msg.ms_PLAY_WAV = "WAV再生 サウンド：";
+Blockly.Msg.ms_ACTION_STOP = "停止";
+Blockly.Msg.ms_ACTION_FRONT = "前足";
+Blockly.Msg.ms_ACTION_REAR = "後足";
+Blockly.Msg.ms_ACTION_OFFSET = "補正";
+Blockly.Msg.ms_ACTION_FWRD = "前進";
+Blockly.Msg.ms_ACTION_BWRD = "後退";
+Blockly.Msg.ms_ACTION_LTRN = "左旋回";
+Blockly.Msg.ms_ACTION_RTRN = "右旋回";
+//
+Blockly.Msg.mm_IR_init_TEXT = "赤外リモコン初期化";
+Blockly.Msg.mm_IR_check_TEXT = "赤外リモコン受信チェック";
+Blockly.Msg.mm_IR_flag_TEXT = "受信フラグ";
+Blockly.Msg.mm_IR_reset_TEXT = "フラグリセット";
+Blockly.Msg.mm_IR_reception_code_TEXT = "受信データ";
+Blockly.Msg.mm_INIT_WAV = "WAV再生初期化 サウンド1";
+Blockly.Msg.mm_INIT_WAV_SOUND2 = "サウンド2";
+Blockly.Msg.mm_INIT_WAV_SOUND3 = "サウンド3";
+Blockly.Msg.mm_INIT_WAV_AUDPIN = "出力ピン";
+Blockly.Msg.mm_INIT_WAV_ENBLPIN = "ENピン";
+Blockly.Msg.mm_PLAY_WAV = "WAV再生 サウンド：";
+Blockly.Msg.mm_ACTION_INIT = "アクション初期化";
+Blockly.Msg.mmp_ACTION_INIT = "アクション初期化";
+Blockly.Msg.mm_ACTION_STOP = "停止";
+Blockly.Msg.mm_ACTION_FRONT = "前足";
+Blockly.Msg.mm_ACTION_REAR = "後足";
+Blockly.Msg.mm_ACTION_OFFSET = "補正";
+Blockly.Msg.mm_ACTION_FWRD = "前進";
+Blockly.Msg.mm_ACTION_BWRD = "後退";
+Blockly.Msg.mm_ACTION_LTRN = "左旋回";
+Blockly.Msg.mm_ACTION_RTRN = "右旋回";
+Blockly.Msg.mm_ACTION_LEFT = "左横歩き";
+Blockly.Msg.mm_ACTION_RGHT = "右横歩き";
+Blockly.Msg.mm_SERVO_DRIVE = "サーボ駆動";
+Blockly.Msg.mm_SERVO_CON = "コネクタ#";
+Blockly.Msg.mm_SERVO_ANGLE = "角度";
+Blockly.Msg.mm_ACTION_FREE = "フリーアクション";
+Blockly.Msg.mm_ARRAY_CREATE_WITH = "要素";
+//20191010
+
+//////////////////////////// Peguino Blocks Text 2019 ////////////////////////////
+// ------------------------ Peguino input bricks ------------------------
+// Peguino Nano Board default wiring:
+// Port C1 = Pin 23 = D5; C2 = Pin 20 = D2; C3 = Pin 6 = A2; D1 = Pin 10 = A6; D2 = Pin 7 = A3; D3 = Pin 24 = D6;
+// Peguino ESP Board default wiring:
+// Port C1 = Pin 25 = GPIO27; C2 = Pin 15 = GPIO23; C3 = Pin 17 = GPIO36; D1 = Pin 21 = GPIO32; D2 = Pin 23 = GPIO25; D3 = Pin 22 = GPIO33;
+
+Blockly.Msg.Peguino_Bodysensor_TEXT = "Personensensor (Bodysensor Brick)";
+Blockly.Msg.Peguino_Bodysensor_TOOLTIP = "Mit diesem Peguino Brick können z.B. Personen und (größere) Tiere in der Nähe erkannt werden.";
+Blockly.Msg.Peguino_Bodysensor_PLUG = "Buchse";
+Blockly.Msg.Peguino_Bodysensor_UNIT = "port";
+Blockly.Msg.Peguino_Bodysensor_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
+Blockly.Msg.Peguino_Bodysensor_HELPURL = "https://www.peguino.com/chat/thread-25.html";
+
+Blockly.Msg.Peguino_ProximityBrick_TEXT = "Distanzsensor (Proximity Brick) / cm ";
+Blockly.Msg.Peguino_ProximityBrick = "cm oder zoll";
+Blockly.Msg.Peguino_ProximityBrick_TOOLTIP = "Proximity = „Nähe oder Lage“. Der Proximity Brick misst die Nähe zu Hindernissen und Objekten und muss mit Buchse A verbunden sein.";
+Blockly.Msg.Peguino_ProximityBrick_HELPURL = "https://www.peguino.com/chat/thread-18.html";
+
+Blockly.Msg.Peguino_ButtonBrick_TEXT = "Druckschalter (Button Brick)";
+Blockly.Msg.Peguino_ButtonBrick_TOOLTIP = "Dieser Peguino Brick ist ein Druckschalter: solange er gedrückt ist, ist der Stromkreislauf geschlosssen.";
+Blockly.Msg.Peguino_ButtonBrick_INPUT = "Buchse";
+Blockly.Msg.Peguino_ButtonBrick_UNIT = "port";
+Blockly.Msg.Peguino_ButtonBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
+Blockly.Msg.Peguino_ButtonBrick_HELPURL = "https://www.peguino.com/chat/thread-21.html";
+
+Blockly.Msg.Peguino_PotiBrick_TEXT = "Drehregler (Potentiometer Brick)";
+Blockly.Msg.Peguino_PotiBrick_TOOLTIP = "Dieser Peguino Brick ist ein Potentiometer: Beim Drehen ändert sich der elektrische Widerstand und erzeugt somit unterschiedliche Zahlenwerte.";
+Blockly.Msg.Peguino_PotiBrick_PLUG = "Buchse";
+Blockly.Msg.Peguino_PotiBrick_UNIT = "port";
+Blockly.Msg.Peguino_PotiBrick_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
+Blockly.Msg.Peguino_PotiBrick_HELPURL = "https://www.peguino.com/chat/thread-14.html";
+
+Blockly.Msg.Peguino_Microprox_TEXT = "Microprox ";
+Blockly.Msg.Peguino_Microprox_TOOLTIP = "Dieser Baustein kann zum Bau eines Roboters eingesetzt werden, der z.B. einer schwarzen Linie auf weißem Grund folgen soll. Es können aber auch kurze Distanzen erkannt werden und Helligkeitsunterschiede registriert werden.";
+Blockly.Msg.Peguino_Microprox_PLUG = "Buchse";
+Blockly.Msg.Peguino_Microprox_UNIT = "port";
+Blockly.Msg.Peguino_Microprox_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
+Blockly.Msg.Peguino_Microprox_HELPURL = "https://www.peguino.com/chat/thread-15.html";
+
+Blockly.Msg.Peguino_ClimateBrick_TEXT = "Klimasensor (Climate Brick)";
+Blockly.Msg.Peguino_ClimateBrick_TOOLTIP = "Dieser Peguino Brick liefert Daten zur gemessenen Termperatur (in °Celsius ) und Luftfeuchtigkeit in %";
+Blockly.Msg.Peguino_ClimateBrick_PLUG = "Buchse";
+Blockly.Msg.Peguino_ClimateBrick_UNIT = "port";
+Blockly.Msg.Peguino_ClimateBrick_CHOICENANO = [["?", "0"], ["C1", "23"], ["C2", "20"], ["D3", "24"]];
+Blockly.Msg.Peguino_ClimateBrick_CHOICEESP32 = [["?", "0"],["C1", "25"],  ["C2", "15"], ["C3", "17"],  ["D1", "21"], ["D2", "23"],  ["D3", "22"]];
+Blockly.Msg.Peguino_ClimateBrick_HELPURL = "https://www.peguino.com/chat/thread-26.html";
+Blockly.Msg.Peguino_ClimateBrick_DHT_READ_C = "Temperatur °C";
+Blockly.Msg.Peguino_ClimateBrick_DHT_READ_H = "Luftfeuchtigkeit %";
+
+Blockly.Msg.PeguinoIRsender_TEXT = "Infrarot Sende-LED (IR-Sender Brick)";
+Blockly.Msg.PeguinoIRsender_INPUT1 = "Pin";
+Blockly.Msg.PeguinoIRsender_INPUT2 = "Frequenz (Hz) 38000 ";
+Blockly.Msg.PeguinoIRsender_TOOLTIP = "Sendet Infrarotlicht in der gegebenen Frequenz aus.";
+Blockly.Msg.PeguinoIRsender_HELPURL = "https://www.peguino.com/chat/";
+
+Blockly.Msg.PeguinoIRreceiver_TEXT = "Infrarot Empfangs-LED (IR-Receiver Brick)";
+Blockly.Msg.PeguinoIRreceiver_INPUT = "Pin";
+Blockly.Msg.PeguinoIRreceiver_TOOLTIP = "Empfängt Signale im Infrarotlichtbereich.";
+Blockly.Msg.PeguinoIRreceiver_HELPURL = "https://www.peguino.com/chat/";
+
+Blockly.Msg.Peguino_Lightsensor_TEXT = "Helligkeitssensor (Lightsensor Brick)";
+Blockly.Msg.Peguino_Lightsensor_TOOLTIP = "Der 'Lightsensor' erkennt Helligkeitsunterschiede. ";
+Blockly.Msg.Peguino_Lightsensor_PLUG = "Buchse";
+Blockly.Msg.Peguino_Lightsensor_UNIT = "port";
+Blockly.Msg.Peguino_Lightsensor_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
+Blockly.Msg.Peguino_Lightsensor_HELPURL = "https://www.peguino.com/chat/thread-13.html";
+
+// ------------------------ Peguino output bricks ------------------------
+Blockly.Msg.Peguino_BuzzerBrick_TEXT = "Buzzer Brick";
+Blockly.Msg.Peguino_BuzzerBrick_TOOLTIP = "Dieser Peguino Brick gibt einen Ton aus";
+Blockly.Msg.Peguino_BuzzerBrick_PLUG = "Buchse";
+Blockly.Msg.Peguino_BuzzerBrick_UNIT = "port";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY = "Ton";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_CHOICE = [["?", "0"],["Note A", "440"],  ["2250 Hz", "2250"], ["3500 Hz", "3500"]];
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_UNIT  = "Ton";
+Blockly.Msg.Peguino_BuzzerBrick_FREQUENCY_VALUE = "Tonfrequenz";
+Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME = "Dauer";
+Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_CHOICE = [["?", "0"], ["0,2 Sekunden", "200"], ["Halbe Sekunde", "500"],  ["1 Sekunde", "1000"]];
+Blockly.Msg.Peguino_BuzzerBrick_PLAYTIME_UNIT  = "tondauer";
+Blockly.Msg.Peguino_BuzzerBrick_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
+Blockly.Msg.Peguino_BuzzerBrick_HELPURL = "https://www.peguino.com/chat/thread-16.html";
+
+Blockly.Msg.Peguino_LED_TEXT = "LED / Leuchtbaustein";
+Blockly.Msg.Peguino_LED_INPUT = "Buchse";
+Blockly.Msg.Peguino_LED_UNIT = "port";
+Blockly.Msg.Peguino_LED_STATUS = "status";
+Blockly.Msg.Peguino_LED_UNIT_CHOICE = [["?", "0"],["C1", "23"],  ["C2", "20"], ["C3", "6"],  ["D1", "10"], ["D2", "7"],  ["D3", "24"]];
+Blockly.Msg.Peguino_LED_TOOLTIP = "Dieser Baustein erzeugt Licht: je nach LED-Typ z.B. in weiß, orange, pink, blau oder einer anderen Farbe.";
+Blockly.Msg.Peguino_LED_HELPURL = "https://www.peguino.com/chat/";
+
+Blockly.Msg.Peguino_RGBLED_TEXT = "RGB-LED / Mehrfarb -Leuchtbaustein";
+Blockly.Msg.Peguino_RGBLED_UNIT = "port";
+Blockly.Msg.Peguino_RGBLED_STATUS = "status";
+Blockly.Msg.Peguino_RGBLED_INPUT = "Pin";
+Blockly.Msg.Peguino_RGBLED_RGBCOLOR = "Farbe auswählen:";
+Blockly.Msg.Peguino_RGBLED_RGBCOLORVALUE = "colorvalue";
+Blockly.Msg.Peguino_RGBLED_RGBRED = "Rot";
+Blockly.Msg.Peguino_RGBLED_RGBGREEN = "Grün";
+Blockly.Msg.Peguino_RGBLED_RGBBLUE = "Blau";
+Blockly.Msg.Peguino_RGBLED_TOOLTIP = "Dieser Baustein erzeugt Licht (an Port F) in unterschiedlichen Farben. Der Farbton kann dabei gemischt werden durch die drei Grundfarben: Rot, Grün und Blau. Leuchten alle drei ergibt die Mischfarbe weißes Licht.";
+Blockly.Msg.Peguino_RGBLED_HELPURL = "https://www.peguino.com/chat/thread-19.html";
+
+Blockly.Msg.Peguino_I2CScan_TEXT = "I2C Adressscanner";
+Blockly.Msg.Peguino_I2CScan_TOOLTIP = "Mit diesem Element kann der I2C Datenbus an Port B auf verbundene Geräteadressen abgesucht werden. Die gefundenen Adressen werden an die serielle Schnittstelle gesendet.";
+Blockly.Msg.Peguino_I2CScan_HELPURL = "https://www.peguino.com/chat/thread-20.html";
+
+Blockly.Msg.Peguino_AttachServo_TEXT = "Servo Motor verbinden";
+Blockly.Msg.Peguino_AttachServo_TOOLTIP = "Mit diesem Baustein wird ein Servo Motor verbunden.";
+Blockly.Msg.Peguino_AttachServo_PLUG = "Buchse";
+Blockly.Msg.Peguino_AttachServo_UNIT = "port";
+Blockly.Msg.Peguino_AttachServo_UNIT_CHOICE = [["?", "0"], ["C3", "6"],  ["D1", "10"], ["D2", "7"]];
+Blockly.Msg.Peguino_AttachServo_HELPURL = "https://www.peguino.com/chat/";
+Blockly.Msg.Peguino_SERVO_DEFAULT_NAME = "Servo1";
+
+
+//////////////////////////// Robobox Blocks Text 2019 ////////////////////////////
+Blockly.Msg.CAT_ROBOBOX = "Robobox";
+Blockly.Msg.ROBOBOX_ANGLE180 = "Angle [0~180°]:";
+Blockly.Msg.ROBOBOX_PIN = "Pin:";
+Blockly.Msg.ROBOBOX_TRIGGER_PIN = "Trigger on pin:";
+Blockly.Msg.ROBOBOX_LISTEN_PIN = "Listen on pin:";
+Blockly.Msg.ROBOBOX_ARRAY = "Array:";
+Blockly.Msg.ROBOBOX_LEN = "Length:";
+
+Blockly.Msg.CAT_ROBOBOX_SERVO = "- Servo-motors";
+Blockly.Msg.ROBOBOX_SERVO_SETANGLE = "Set angle";
+Blockly.Msg.ROBOBOX_SERVO_GETANGLE = "Get angle";
+Blockly.Msg.ROBOBOX_SERVO_TOOLTIP = "Help";
+
+Blockly.Msg.CAT_ROBOBOX_SENSORS = "- Sensors";
+Blockly.Msg.ROBOBOX_SENSORS_ULTRASOUND = "Distance measured in cm";
+
+Blockly.Msg.CAT_ROBOBOX_IRREMOTE = "- IRremote";
+Blockly.Msg.ROBOBOX_IRREMOTE_DECODE = "Decode IRsignal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALLEN = "Get signal length";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALARRAY = "Get signal array";
+Blockly.Msg.ROBOBOX_IRREMOTE_SIGNALCODE = "Get signal code";
+Blockly.Msg.ROBOBOX_IRREMOTE_RESUME = "Resume";
+Blockly.Msg.ROBOBOX_IRREMOTE_SEND = "Send IRsignal";
+Blockly.Msg.ROBOBOX_IRREMOTE_SENDARRAY = "Send IRsignal";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH4 = "- Robobox car";
+Blockly.Msg.ROBOBOX_MONTH4_INIT = "Connect motors";
+Blockly.Msg.ROBOBOX_MONTH4_MOVE = "Move forward";
+Blockly.Msg.ROBOBOX_MONTH4_MOVEBACKWARD = "Move backward";
+Blockly.Msg.ROBOBOX_MONTH4_TURNRIGHT = "Turn right";
+Blockly.Msg.ROBOBOX_MONTH4_TURNLEFT = "Turn left";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH6 = "- Light";
+Blockly.Msg.ROBOBOX_MONTH6_LINEC = "Get central line";
+Blockly.Msg.ROBOBOX_MONTH6_LINED = "Get right line";
+Blockly.Msg.ROBOBOX_MONTH6_LINEG = "Get left line";
+Blockly.Msg.ROBOBOX_MONTH6_CALCANGLE = "Compile angle";
+
+Blockly.Msg.CAT_ROBOBOX_MONTH8 = "- Motorbike";
+Blockly.Msg.ROBOBOX_MONTH8_ANALYZE = "Analyze";
+
+//////////////////////////// Virtuino 08/05/2020 ////////////////////////////
+Blockly.Msg.VIRTUINO_INIT_TEXT = "initi connection :";
+Blockly.Msg.VIRTUINO_INIT_RX = "RX";
+Blockly.Msg.VIRTUINO_INIT_TX = "TX";
+Blockly.Msg.VIRTUINO_INIT_SPEED = "speed";
+Blockly.Msg.VIRTUINO_DV_TEXT = "receive state";
+Blockly.Msg.VIRTUINO_DV_INPUT = "on virtual canal (DV)";
+Blockly.Msg.VIRTUINO_TOOLTIP = "Virtuino use, see help or go website https://virtuino.com/";
+Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
+
+//////////////////////////// Grove Beginner Kit 12/09//2020 ////////////////////////////
+Blockly.Msg.GROVE_BK_HELPURL = 'https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/';
+Blockly.Msg.GROVE_BK_INOUT_LED_INPUT1 = Blockly.Msg.GROVE_INOUT_LED_INPUT1;
+Blockly.Msg.GROVE_BK_INOUT_LED_INPUT3 = Blockly.Msg.GROVE_INOUT_LED_INPUT3;
+Blockly.Msg.GROVE_BK_INOUT_LED_TOOLTIP = Blockly.Msg.GROVE_INOUT_LED_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_BUZZER_TEXT1 = Blockly.Msg.GROVE_INOUT_BUZZER_TEXT1;
+Blockly.Msg.GROVE_BK_INOUT_BUZZER_TEXT2 = Blockly.Msg.GROVE_INOUT_BUZZER_TEXT2;
+Blockly.Msg.GROVE_BK_INOUT_BUZZER_TOOLTIP = Blockly.Msg.GROVE_INOUT_BUZZER_TOOLTIP;
+Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT1 = "play tone on piezo";
+Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT2 = "note";
+Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT3 = "scale";
+Blockly.Msg.GROVE_BK_OUT_BUZZER_TEXT4 = "time";
+Blockly.Msg.GROVE_BK_OLED_TEXT1 = "write to OLED on I2C";
+Blockly.Msg.GROVE_BK_OLED_TEXT2 = "input (string or number)";
+Blockly.Msg.GROVE_BK_OLED_TEXT3 = "line (0~3)";
+Blockly.Msg.GROVE_BK_OLED_TEXT4 = "column (0~15)";
+Blockly.Msg.GROVE_BK_OLED_TEXT5 = "line refresh";
+Blockly.Msg.GROVE_BK_OLED_TEXT = Blockly.Msg.lp2i_u8g_draw_string_Text;
+Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_X = Blockly.Msg.lp2i_u8g_draw_string_X;
+Blockly.Msg.GROVE_BK_OLED_DRAW_STRING_Y = Blockly.Msg.lp2i_u8g_draw_string_Y;
+Blockly.Msg.GROVE_BK_OLED_TOOLTIP = 'print on OLED screen';
+Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT = Blockly.Msg.lp2i_u8g_draw_4strings_texts_to_display;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE1 = Blockly.Msg.lp2i_u8g_draw_4strings_Text_line1;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE2 = Blockly.Msg.lp2i_u8g_draw_4strings_Text_line2;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE3 = Blockly.Msg.lp2i_u8g_draw_4strings_Text_line3;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4STRINGS_TEXT_LINE4 = Blockly.Msg.lp2i_u8g_draw_4strings_Text_line4;
+Blockly.Msg.GROVE_BK_OLED_PRINT_N = Blockly.Msg.lp2i_u8g_print_N;
+Blockly.Msg.GROVE_BK_OLED_PRINT_X = Blockly.Msg.lp2i_u8g_print_X;
+Blockly.Msg.GROVE_BK_OLED_PRINT_Y = Blockly.Msg.lp2i_u8g_print_Y;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT = Blockly.Msg.lp2i_u8g_4draw_print_to_display;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE1 = Blockly.Msg.lp2i_u8g_4draw_print_Text_line1;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE2 = Blockly.Msg.lp2i_u8g_4draw_print_Text_line2;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE3 = Blockly.Msg.lp2i_u8g_4draw_print_Text_line3;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_TEXT_LINE4 = Blockly.Msg.lp2i_u8g_4draw_print_Text_line4;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N1 = Blockly.Msg.lp2i_u8g_4draw_print_N1;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N2 = Blockly.Msg.lp2i_u8g_4draw_print_N2;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N3 = Blockly.Msg.lp2i_u8g_4draw_print_N3;
+Blockly.Msg.GROVE_BK_OLED_DRAW_4DRAW_PRINT_N4 = Blockly.Msg.lp2i_u8g_4draw_print_N4;
+Blockly.Msg.GROVE_BK_INOUT_BUTTON_TEXT = Blockly.Msg.GROVE_INOUT_BUTTON_TEXT;
+Blockly.Msg.GROVE_BK_INOUT_BUTTON_TOOLTIP = Blockly.Msg.GROVE_INOUT_BUTTON_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_ROT_ANGLE_TEXT = Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TEXT;
+Blockly.Msg.GROVE_BK_INOUT_ROT_ANGLE_TOOLTIP = Blockly.Msg.GROVE_INOUT_ROT_ANGLE_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_LDR_TEXT = Blockly.Msg.GROVE_INOUT_LDR_TEXT;
+Blockly.Msg.GROVE_BK_INOUT_LDR_TOOLTIP = Blockly.Msg.GROVE_INOUT_LDR_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_SOUND_TEXT = Blockly.Msg.GROVE_INOUT_SOUND_TEXT;
+Blockly.Msg.GROVE_BK_INOUT_SOUND_TOOLTIP = Blockly.Msg.GROVE_INOUT_SOUND_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_DHT_READ_TYPE = Blockly.Msg.GROVE_INOUT_DHT_READ_TYPE;
+Blockly.Msg.GROVE_BK_INOUT_DHT_READ_H = Blockly.Msg.GROVE_INOUT_DHT_READ_H;
+Blockly.Msg.GROVE_BK_INOUT_DHT_READ_C = Blockly.Msg.GROVE_INOUT_DHT_READ_C;
+Blockly.Msg.GROVE_BK_INOUT_DHT_READ_SENSOR = Blockly.Msg.GROVE_INOUT_DHT_READ_SENSOR;
+Blockly.Msg.GROVE_BK_INOUT_DHT_READ_TOOLTIP = Blockly.Msg.GROVE_INOUT_DHT_READ_TOOLTIP;
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT = 'value';
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_T = 'of temperature (°C)';
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_P = 'of pressure (Pa)';
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TEXT_A = 'of altitude (m)';
+Blockly.Msg.GROVE_BK_INOUT_PRESSURE_TOOLTIP = 'get back value of temperature and pressure sensors, and calculate altitude';
+Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT1 = 'acceleration';
+Blockly.Msg.GROVE_BK_INOUT_GYRO_TEXT2 = 'axis';
+Blockly.Msg.GROVE_BK_INOUT_GYRO_TOOLTIP = "get back acceleration value from sensor, in 3 dimensions";

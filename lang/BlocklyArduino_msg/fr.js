@@ -5,7 +5,7 @@ var MSG = {
   btn_variable: "valider",
   span_card_picture_change: "changer",
   span_config: " configurer les blocs",
-  span_config_kit: "configurer la maquette",
+  span_config_kit: "comment configurer",
   span_picture: " afficher la carte",
   span_wiring: " plan de câblage",
   span_supervision: " supervision",
@@ -27,6 +27,7 @@ var MSG = {
   span_font: " choix de police",
   span_colors: " choix de couleur",
   span_reset: " ré initialiser",
+  span_wiring: " câblage à suivre ",
   span_blockfactory: " usine à blocs ",
   span_RGB: " conversion couleur <-> valeurs RVB",
   span_convert: " conversion texte <-> binaire",
@@ -104,7 +105,7 @@ var MSG = {
   arduino_card:"supprimer tout et sélectionner une carte",
   span_about:"à propos",
   aboutModalLabel:"à propos ...",
-  aboutBody:"<br />- développement et améliorations par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), grâce à l'indispensable travail et les conseils d'Olivier Métayer, merci à tous les contributeurs par mails ou sur le forum !" 
+  aboutBody:"<br />- développement par Sébastien Canet (<a href='mailto:sebastien.canet@ac-nantes.fr' traget=_blank>sebastien.canet@ac-nantes.fr</a>), aidé d'Olivier Métayer, merci à tous les contributeurs par mails ou sur le forum !" 
 	+ "<br />"
 	+ "<br />S'appuie sur :",
   msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités\n"
@@ -114,8 +115,20 @@ var MSG = {
 	+ "\n\n"
 	+ "Veuillez suivre les instructions sur la page suivante :\n"
 	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",
+  paypalModalLabel:"Aidez les logiciels libres !",
+  paypalBody:"Merci de faire un don pour aider au développement et à l'amélioration de ce logiciel, SANS VOUS LES LOGICIELS LIBRES NE PEUVENT SURVIVRE !" 
+	+ "<br />"
+	+ "<br />ENSEIGNANTS & ASSOCIATIONS"
+	+ "<br />vous pouvez aussi me demander une facture (<a href='mailto:scanet@libreduc.cc' traget=_blank>scanet@libreduc.cc</a>) pour que votre structure me fasse un 'don' officiel par virement bancaire. Je ne fais pas payer de licence mais je compte sur vous pour aider du montant auquel vous estimez ce travail.",
+  msg_ajax_ko:"Requêtes AJAX non supportées par votre navigateur, les fonctionnalités\n"
+	+ "suivantes ne seront pas opérationnelles : \n"
+	+ "- chargement de blocs via l'URL \n"
+	+ "- supervision\n"
+	+ "\n\n"
+	+ "Veuillez suivre les instructions sur la page suivante :\n"
+	+ "http://testingfreak.com/how-to-fix-cross-origin-request-security-cors-error-in-firefox-chrome-and-ie/\n",  
   span_ajax_msg:"Ne plus afficher ce message.",
-  span_forms:"UTILISATEUR, QUI ETES VOUS ???",
+  span_forms:"UTILISATEURS, QUI ETES VOUS ???",
   span_menu_1:"Projets",
   span_menu_11:"ouvrir...",
   span_menu_12:"sauver sous...",
@@ -150,4 +163,9 @@ var MSG = {
   span_menu_52:"wiki",
   span_menu_53:"forum",
   span_menu_6:"à propos",
+  varText1:"La variable ",
+  varText2:"a été typée comme '",
+  varText3:"'\n",
+  varText4:"et ce bloc essaie de changer le type en '",
+  varText5:"'!",
 };
